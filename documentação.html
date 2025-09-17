@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guia de Estilo – Eletromecânica Bazan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+<style>
+:root{
+  --brand:#4765E4;
+  --brand-dark:#2F49B8;
+  --ink:#1F2937;
+  --text:#445069;
+  --line:#CBD5E1;
+  --bg:#F8FAFC;
+  --success:#16A34A;
+  --warning:#F59E0B;
+  --error:#DC2626;
+  --radius:14px;
+  --shadow:0 6px 18px rgba(31,41,55,.08);
+}
+*{box-sizing:border-box}
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+body, p, li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.container{max-width:1120px;margin:0 auto;padding:32px}
+h1,h2,h3{font-family:"Montserrat",Inter,sans-serif;color:var(--ink);margin:0 0 12px}
+h1{font-size:clamp(28px,3.2vw,40px)}
+h2{font-size:clamp(22px,2.4vw,28px)}
+p{margin:0 0 14px}
+header{
+  background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10
+}
+.nav{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--brand)}
+.badge{padding:4px 10px;background:var(--brand);color:#fff;border-radius:999px;font-size:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:var(--radius);border:1px solid transparent;box-shadow:var(--shadow);text-decoration:none;font-weight:600;transition:.2s ease}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand-dark)}
+.btn.outline{background:#fff;border-color:var(--brand);color:var(--brand)}
+.btn.outline:hover{background:#f3f6ff}
+.grid{display:grid;gap:18px}
+.grid.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.card h3{margin-top:6px}
+.kpi{display:flex;gap:12px;align-items:center}
+.kpi .dot{width:10px;height:10px;border-radius:50%;background:var(--brand)}
+.code{font-family:ui-monospace,Consolas,Menlo,monospace;background:#0b1220;color:#e6edf3;border-radius:12px;padding:16px;overflow:auto}
+.form{display:grid;gap:12px}
+.input, textarea{
+  width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;color:var(--ink)
+}
+.input:focus, textarea:focus{outline:2px solid color-mix(in srgb, var(--brand) 40%, white)}
+.footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;color:#61708b}
+.color-swatch{display:flex;align-items:center;gap:12px}
+.sw{width:36px;height:36px;border-radius:8px;border:1px solid #e5e7eb}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <span class="badge">B</span> Eletromecânica Bazan
+    </div>
+    <nav>
+      <a class="btn outline" href="#servicos">Serviços</a>
+      <a class="btn primary" href="#contato">Fale conosco</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+
+
+<section class="card">
+  <i data-lucide="wrench"></i>
+  <h3>Manutenção eletromecânica</h3>
+  <p>Corretiva, preventiva e preditiva para reduzir paradas.</p>
+</section>
+
+
+  <section>
+    <h1>Confiabilidade eletromecânica para a sua produção</h1>
+    <p>Instalação, manutenção e automação com foco em segurança, eficiência e disponibilidade.</p>
+    <p>
+      <a class="btn primary" href="#contato">Solicitar orçamento</a>
+      <a class="btn outline" href="#portfolio">Ver portfólio</a>
+    </p>
+  </section>
+
+  <section id="cores">
+    <h2>Paleta de cores</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <div class="color-swatch"><span class="sw" style="background:#4765E4"></span><strong>#4765E4</strong> – Primária</div>
+      <div class="color-swatch"><span class="sw" style="background:#2F49B8"></span><strong>#2F49B8</strong> – Primária escura</div>
+      <div class="color-swatch"><span class="sw" style="background:#1F2937"></span><strong>#1F2937</strong> – Grafite</div>
+      <div class="color-swatch"><span class="sw" style="background:#445069"></span><strong>#445069</strong> – Texto</div>
+      <div class="color-swatch"><span class="sw" style="background:#CBD5E1"></span><strong>#CBD5E1</strong> – Linha</div>
+      <div class="color-swatch"><span class="sw" style="background:#F8FAFC"></span><strong>#F8FAFC</strong> – Fundo</div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços (componentes)</h2>
+    <div class="grid cards">
+      <article class="card"><div class="kpi"><span class="dot"></span><h3>Manutenção eletromecânica</h3></div><p>Preventiva, preditiva e corretiva.</p></article>
+      <article class="card"><div class="kpi"><span class="dot"></span><h3>Motores, bombas e redutores</h3></div><p>Diagnóstico, substituição e alinhamento.</p></article>
+      <article class="card"><div class="kpi"><span class="dot"></span><h3>Painéis elétricos</h3></div><p>Montagem e retrofit com documentação.</p></article>
+      <article class="card"><div class="kpi"><span class="dot"></span><h3>Automação</h3></div><p>CLP, sensores, inversores e partidas.</p></article>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form class="form">
+      <input class="input" type="text" placeholder="Seu nome">
+      <input class="input" type="email" placeholder="E-mail">
+      <input class="input" type="tel" placeholder="Telefone">
+      <textarea rows="4" placeholder="Conte rapidamente sua necessidade"></textarea>
+      <button class="btn primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Exemplo de uso em CSS</h2>
+    <pre class="code">.botao-primario{ background: var(--brand); color:#fff }
+.botao-primario:hover{ background: var(--brand-dark) }
+.texto-sucesso{ color: var(--success) }
+.borda-leve{ border:1px solid var(--line) }</pre>
+  </section>
+
+  <div class="footer">© Eletromecânica Bazan • Todos os direitos reservados</div>
+🛠️ Ícones para usar junto às fotos
+
+Use um set consistente para reforçar a identidade.
+Sugiro Lucide Icons (https://lucide.dev
+) – leves, em SVG, fáceis de integrar.
+
+Por página/seção:
+
+Início (destaques):
+
+⏱️ clock → rapidez/atendimento ágil
+
+🔒 shield-check → segurança
+
+⚡ zap → eficiência/energia
+
+🔧 wrench → manutenção
+
+Sobre nós (pilares):
+
+✅ check-circle → confiabilidade
+
+📈 trending-up → produtividade
+
+💬 messages-square → transparência
+
+🤝 handshake → parceria
+
+Serviços:
+
+⚙️ settings → manutenção eletromecânica
+
+🔩 cog ou gear → motores/redutores
+
+📟 cpu → automação/CLP
+
+🗄️ server → painéis elétricos
+
+🔨 hammer → soldagem/caldeiraria
+
+Portfólio:
+
+🏗️ building-2 → obras/projetos industriais
+
+🖼️ image → antes/depois (ilustrar comparativo)
+
+📑 file-check → relatórios técnicos
+
+Clientes:
+
+🌐 globe → diversidade de setores
+
+🏭 factory → indústrias
+
+🛒 shopping-cart → comércio
+
+🚛 truck → logística
+
+Contato:
+
+📞 phone
+
+✉️ mail
+
+📍 map-pin
+
+💬 message-circle (WhatsApp)
+
+</main>
+</body>
+</html>
