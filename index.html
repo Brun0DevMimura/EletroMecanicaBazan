@@ -1,162 +1,1663 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eletromecânica Bazan | Mais de 10 anos de experiência</title>
+    <meta
+      name="keywords"
+      content="eletromecânica, manutenção industrial, automação, instalações elétricas, Suzano, Cabo de Santo Agostinho"
+    />
+    <meta
+      name="description"
+      content="Eletromecânica Bazan — Soluções industriais com excelência desde 2011. Manutenção, automação e instalações elétricas para indústrias em SP e PE."
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/Logo_Bazan_Industrial_DetalheAzul.png"
+      type="image/x-icon"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>EletroMecânica Bazan</title>
-</head>
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-<body>
-    <nav id="navbar">
-        <div id="navbar-conteiner">
-            <h1 class="logo">EletroMecânica Bazan</h1>
+    <style>
+      /* =============================================
+           ELETROMECÂNICA BAZAN - CSS COMPLETO
+           Baseado no layout da Inoxmaia, personalizado para Bazan
+           ============================================= */
 
-      <!-- Checkbox oculto para ativar o menu -->
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      :root {
+        --primary-color: #4765e4;
+        --dark-color: #333;
+        --light-color: #f8f9fa;
+        --border-color: #ddd;
+        --whatsapp-color: #25d366;
+      }
 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-            <ul class="navbar-items">
-                <li><a class="navlink" href="#index">Inicio</a></li>
-                <li><a class="navlink" href="#clients">Clientes</a></li>
-                <li><a class="navlink" href="#services">Serviços</a></li>
-                <li><a class="navlink" href="#contact">Contato</a></li>
-                <li><a class="navlink" href="#about">Sobre</a></li>
-                <li><a class="navlink" href="#gallery">Fotos</a></li>
-            </ul>
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--dark-color);
+        line-height: 1.6;
+        overflow-x: hidden;
+        background-color: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10%;
+      }
+      p {
+        text-align: justify;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* HEADER */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: solid 2px var(--primary-color);
+        transition: all 0.5s;
+      }
+
+      .header.scrolled {
+        padding: 10px 0;
+      }
+
+      .header.scrolled .nav a,
+      .header.scrolled .slogan,
+      .header.scrolled .fa-whatsapp-square {
+        color: var(--dark-color) !important;
+        text-decoration: none;
+      }
+
+      .slogan {
+        font-size: 12px;
+        color: var(--dark-color);
+        line-height: 1.4;
+      }
+
+      .ic-menu {
+        background: url("./img/menu-svg.svg") center center no-repeat;
+        background-size: cover;
+        display: inline-block;
+        color: var(--dark-color);
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+      }
+
+      .content-nav.active {
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+
+      .nav {
+        list-style: none;
+        padding: 0;
+        justify-content: flex-end;
+        display: flex;
+      }
+
+      .nav .menu-item a {
+        display: inline-block;
+        padding: 0 10px;
+        font-weight: 800;
+        color: var(--dark-color);
+        font-size: 12px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+
+      .nav .menu-item a:hover {
+        color: var(--light-color);
+        background-color: var(--primary-color);
+        text-decoration: none;
+        transition: all 0.5s;
+      }
+
+      /* HERO */
+      .slider-hospital {
+        margin-top: 90px;
+        height: calc(100vh - 90px);
+      }
+
+      .slidermaraia {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: url("./img/HomemSoldando.png") center center no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .slider-top {
+        height: 90vh;
+        color: #fff;
+      }
+
+      .hero-content {
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content h1 span {
+        color: var(--primary-color);
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn-hero {
+        background: var(--primary-color);
+        text-decoration: none;
+        color: #f8fafc;
+        border-radius: 10px;
+        padding: 10px 18px;
+        display: inline-block;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+      }
+
+      .btn-hero:hover {
+        background: #f8fafc;
+        text-decoration: none;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* SOBRE */
+      .session-sobre {
+        padding: 60px 0;
+      }
+
+      .session-sobre p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.8;
+      }
+
+      .session-sobre h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .session-sobre h2:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--primary-color);
+      }
+
+      .borderradius {
+        border-radius: 30px 0 30px 0;
+      }
+
+      /* DESTAQUES (SERVIÇOS) */
+      .session-destaques {
+        padding: 80px 0;
+        position: relative;
+        background: #f8f9fa;
+      }
+
+      .session-destaques h2 {
+        color: var(--primary-color);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .session-destaques p {
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+
+      .item-destaques {
+        display: inline-flex;
+        width: 100%;
+        height: 280px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 0 12px 0 12px;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s;
+      }
+
+      .item-destaques:hover {
+        transform: scale(1.03);
+      }
+
+      .item-destaques div {
+        z-index: 9;
+        position: relative;
+        text-align: center;
+      }
+
+      .item-destaques:before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: #000;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 1;
+        border-radius: 0 12px 0 12px;
+        transition: all 0.5s;
+      }
+
+      .item-destaques:hover:before {
+        opacity: 0.7;
+      }
+
+      .item-destaques img {
+        width: auto;
+        max-width: 100%;
+        height: 90px;
+        margin-bottom: 15px;
+      }
+
+      .item-destaques h3 {
+        font-size: 22px;
+        color: #fff;
+        padding: 0 20px;
+        display: block;
+        font-weight: 600;
+      }
+
+      /* SWIPER PAGINATION & NAV */
+      .swiper-pagination {
+        width: 100%;
+        bottom: -20px;
+        left: 0;
+      }
+
+      .swiper-pagination-bullet {
+        margin: 0 5px;
+        border-radius: 100% !important;
+        background: #ccc;
+        border: none !important;
+        width: 12px;
+        height: 12px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--primary-color) !important;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: var(--primary-color) !important;
+        background: none !important;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+
+      #prev-slider-destaques {
+        left: -50px !important;
+      }
+
+      #next-slider-destaques {
+        right: -50px !important;
+      }
+
+      /* DEPOIMENTOS */
+      .session-depoimentos {
+        padding: 80px 0;
+      }
+
+      .session-depoimentos h2 {
+        font-size: 32px;
+        display: inline-block;
+        color: var(--dark-color);
+        margin: 0 0 50px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .session-depoimentos h2 b {
+        color: var(--primary-color);
+      }
+
+      .session-depoimentos h5 {
+        font-weight: 700;
+        font-size: 15px;
+        margin: 0;
+      }
+
+      .session-depoimentos span {
+        font-size: 13px;
+        color: #666;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .session-depoimentos p {
+        font-size: 13px;
+        font-weight: 300;
+        font-style: italic;
+        color: #555;
+      }
+
+      .img-depoimentos img {
+        border-radius: 100%;
+        border: solid 3px #ccc;
+      }
+
+      /* TIPO BADGE */
+      .tipo {
+        border-radius: 0px 10px 0px 0px;
+        padding: 8px 15px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        position: relative;
+        bottom: 30px;
+        right: 0px;
+        background: var(--primary-color);
+      }
+
+      .img-border {
+        position: relative;
+      }
+
+      .img-border img {
+        border-radius: 10% 0 10% 0;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #111;
+        color: #aaa;
+      }
+
+      .session-footer {
+        padding: 35px 0;
+        color: #000;
+        font-size: 13px;
+        border-top: solid 1px var(--border-color);
+      }
+
+      .session-footer span {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        color: #ccc;
+      }
+
+      .session-footer span i {
+        color: var(--primary-color);
+      }
+
+      .nav-footer {
+        padding: 0;
+        display: block;
+      }
+
+      .nav-footer .menu-item {
+        display: block;
+        width: 100%;
+      }
+
+      .nav-footer .menu-item a {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        font-size: 13px !important;
+        color: #ccc !important;
+        transition: color 0.3s;
+      }
+
+      .nav-footer .menu-item a:hover {
+        color: var(--primary-color) !important;
+      }
+
+      .redes a {
+        display: inline-block;
+        font-size: 16px;
+        margin: 0 6px;
+        border-radius: 100%;
+        color: var(--primary-color);
+        transition: color 0.3s;
+      }
+
+      .redes a:hover {
+        color: #fff;
+      }
+
+      .copy {
+        padding: 10px 0;
+        font-size: 12px;
+        background: #000;
+        color: #777;
+        text-align: center;
+      }
+
+      .copy a {
+        font-size: 12px;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      /* MAPS */
+      .maps {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .maps > iframe {
+        box-sizing: border-box;
+        flex: 0 0 calc(50% - 10px);
+        width: calc(50% - 10px);
+        min-width: 300px;
+        height: 450px;
+        border: 0;
+      }
+
+      /* BOTÃO VOLTAR AO TOPO */
+      .seta-up {
+        display: none;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        text-align: center;
+        color: #fff;
+        padding: 12px 17px;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        right: 15px;
+        bottom: 120px;
+        cursor: pointer;
+        line-height: 1.2;
+      }
+
+      .seta-up:hover {
+        background-color: rgb(71, 101, 228, 0.8);
+      }
+
+      /* WHATSAPP FLOAT */
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--whatsapp-color);
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #128c7e;
+      }
+
+      /* LINK BTN */
+      .link-btn {
+        display: inline-flex;
+        color: var(--primary-color) !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        align-items: center;
+        transition: transform 0.3s;
+      }
+
+      .link-btn img {
+        margin-left: 5px;
+        width: 20px;
+        transition: transform 0.3s;
+      }
+
+      .link-btn:hover img {
+        transform: translateX(3px);
+      }
+      /* ANIMAÇÃO FADE IN DOWN COM SCROLL */
+      .fadeInDown {
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .fadeInDown.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* UTILS */
+      .max-img img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .row-center {
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ESTILO DOS BOTÕES QUADRADOS */
+      .btn-sobrenos {
+        gap: 16px;
+      }
+.btn-essence {
+    background: #f8f9fa; /* Cinza claro */
+    color: #555;
+    border: none;
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px;
+}
+
+.btn-essence i {
+    font-size: 28px;
+    transition: all 0.3s ease;
+}
+
+.btn-essence:hover {
+    background: #4765E4; /* Azul da Bazan */
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(71, 101, 228, 0.3);
+}
+
+.btn-essence:hover i {
+    color: white;
+}
+
+/* ESTILO DO MODAL OVERLAY */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ESTILO DO MODAL CONTEÚDO */
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ESTILO DO BOTÃO DE FECHAR */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #4765E4;
+}
+
+/* ESTILO DO TÍTULO DO MODAL */
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.modal-title:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #4765E4;
+}
+
+/* ESTILO DO TEXTO DO MODAL */
+.modal-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+      /* RESPONSIVO */
+
+      @media screen and (max-width: 991px) {
+        .nav {
+          padding: 20px 0 0 0;
+          flex-direction: column;
+          display: none;
+        }
+        .nav .menu-item {
+          display: block;
+          width: 100%;
+        }
+        .nav .menu-item a {
+          display: block;
+          width: 100%;
+          padding: 15px 0;
+          font-size: 16px;
+          text-align: center;
+          border-top: solid 0.3px var(--border-color);
+          font-weight: 400;
+        }
+        .content-nav.active .nav {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+        }
+        .header {
+          padding: 20px;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+        .session-sobre,
+        .session-destaques {
+          padding: 40px 0;
+        }
+        .session-depoimentos {
+          padding: 40px 20px;
+        }
+        .slogan {
+          font-size: 14px;
+          line-height: 16px;
+          display: block;
+          margin: 5px 0 0 0;
+        }
+        .nav-footer .menu-item a,
+        .session-footer span {
+          font-size: 16px !important;
+        }
+  
+      }
+      @media screen and (max-width: 900px) {
+        .nav {
+          padding: 20px 0 0 0;
+          flex-direction: column;
+          display: none;
+        }
+        .nav .menu-item {
+          display: block;
+          width: 100%;
+        }
+        .nav .menu-item a {
+          display: block;
+          width: 100%;
+          padding: 15px 0;
+          font-size: 16px;
+          text-align: center;
+          border-top: solid 0.3px var(--border-color);
+          font-weight: 400;
+        }
+        .content-nav.active .nav {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+        }
+        .header {
+          padding: 20px;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+        .session-sobre,
+        .session-destaques {
+          padding: 40px 0;
+        }
+        .session-depoimentos {
+          padding: 40px 20px;
+        }
+        .slogan {
+          font-size: 14px;
+          line-height: 16px;
+          display: block;
+          margin: 5px 0 0 0;
+        }
+        .nav-footer .menu-item a,
+        .session-footer span {
+          font-size: 16px !important;
+        }
+      }
+      /* MOBILE MENU */
+      @media screen and (max-width: 768px) {
+        .content-nav.active .nav {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+        }
+
+        .content-nav.active .nav .menu-item {
+          display: block;
+          width: 100%;
+        }
+
+        .content-nav.active .nav .menu-item a {
+          display: block;
+          width: 100%;
+          padding: 15px 20px;
+          font-size: 16px;
+          text-align: center;
+          border-top: solid 1px #eee;
+          font-weight: 500;
+          color: #333;
+        }
+
+        .content-nav.active .nav .menu-item:first-child a {
+          border-top: none;
+        }
+
+        .content-nav.active .nav .menu-item a:hover {
+          background:var(--primary-color);
+          color: var(--light-color);
+      
+        }
+
+        .nav {
+          padding: 20px 0 0 0;
+          flex-direction: column;
+          display: none;
+        }
+        .nav .menu-item {
+          display: block;
+          width: 100%;
+        }
+        .nav .menu-item a {
+          display: block;
+          width: 100%;
+          padding: 15px 0;
+          font-size: 16px;
+          text-align: center;
+          border-top: solid 0.3px var(--border-color);
+          font-weight: 400;
+        }
+
+        #prev-slider-destaques,
+        #next-slider-destaques {
+          display: none !important;
+        }
+
+        .header {
+          padding: 20px;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+        .session-sobre,
+        .session-destaques {
+          padding: 40px 0;
+        }
+        .session-depoimentos {
+          padding: 40px 20px;
+        }
+        .slogan {
+          font-size: 14px;
+          line-height: 16px;
+          display: block;
+          margin: 5px 0 0 0;
+        }
+        .nav-footer .menu-item a,
+        .session-footer span {
+          font-size: 16px !important;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .maps > iframe {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+        .hero-content p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/5511999999999"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-lg-2">
+            <a href="index.html">
+              <img
+                src="./img/LogoBazanPretoBrancoEscrita.svg"
+                alt="Logo Eletromecânica Bazan"
+                class="img-fluid"
+                style="height: 70px"
+              />
+            </a>
+          </div>
+          <div class="col-6 col-lg-3 d-none d-lg-block">
+            <span class="slogan"
+              >Eletromecânica Bazan <br />
+              Mais de 10 anos de experiência</span
+            >
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+            <span class="ic-menu" id="hamburger"></span>
+          </div>
+          <div class="col-12 col-lg-7 text-lg-right">
+            <span class="d-none d-lg-block" style="margin-right: 15px">
+              <i
+                class="fa fa-whatsapp-square"
+                style="color: var(--whatsapp-color)"
+              ></i>
+              11 99999-9999
+            </span>
+            <div class="content-nav" id="mobileMenu">
+              <ul class="nav">
+                <li class="menu-item">
+                  <a href="index.html">Início</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Quem Somos</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Nossos Serviços</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Portfólio</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </nav>
-    <header id="index">
-        <div id="index-conteiner">
-            <h2>Olá somos a EletroMecânica Bazan</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ad?</p>
-            <a href="" class="btn">Saiba Mais</a>
-            <video autoplay muted loop class="background-video">
-                <source src="img/esteira_rolo.mp4" type="video/mp4">
-
-            </video>
-        </div>
+      </div>
     </header>
-    <!-- Sobre -->
-    <section id="clients">
-        <div class="headline">Nossos clientes</div>
-        <div id="clients-conteiner">
-            <img src="/img/bimbo.png" class="client" alt="">
-            <img src="/img/panco.png" class="client" alt="">
-            <img src="/img/maximus.png" class="client" alt="">
-        </div>
-    </section>
-    <section id="services">
-        <div class="headline">
-            O que fazemos
-        </div>
-        <div id="service-conteiner">
-            <div class="service">
-                <i class="fa-solid fa-hammer"></i>
-                <span class="service-title">Criação de Equipamentos</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis autem illo, reiciendis repellat
-                    maxime optio.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-wrench"></i>
-                <span class="service-title">Manutenção Especializada</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis autem illo, reiciendis repellat
-                    maxime optio.</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-pen"></i>
-                <span class="service-title">Solução de Problemas</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis autem illo, reiciendis repellat
-                    maxime optio.</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="headline">Contato</div>
 
+    <!-- HERO -->
+    <div class="slider-hospital">
+      <div class="slidermaraia">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="hero-content">
+                <h1>Manutenção que <span>move indústrias</span></h1>
+                <p>
+                  Desde 2011, transformando desafios em soluções com precisão,
+                  confiança e resultado real.
+                </p>
+                <a href="Construção.html" class="btn-hero"
+                  >Solicite um Orçamento</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div id="contact-conteiner">
-            <div id="items">
-                <div class="item">
-                    <a href="https://wa.link/wgqfag" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                    <p>whatsapp</p>
+    <!-- SOBRE -->
+    <div class="session-sobre">
+      <div class="container">
+        <div class="row row-center">
+          <div class="col-12 col-lg-3 text-center mb-4 mb-lg-0">
+            <img
+              src="./img/LogoBazanPretoBranco.svg"
+              alt="Ícone Eletromecânica Bazan"
+              class="img-fluid max-img fadeInDown"
+              style="max-width: 200px"
+            />
+          </div>
+          <div class="col-12 col-lg-8">
+             <b style="color: var(--primary-color)">Sobre Nós</b><br>
+             <h2>Conheça Nossa <b>Essência</b></h2>
+            <p class="hist-bazan">
+              Em <b>1º de setembro de 2011</b>, pai e filho transformaram um
+              sonho em legado: a <b>Eletromecânica Bazan</b>. Mais de 13 anos
+              depois, somos parceiros de gigantes como
+              <b>Grupo Bimbo, Panco e LPG Foods</b> — não por acaso, mas pela
+              <b>excelência consistente e entrega com alma</b>. Não entregamos
+              apenas serviços. Entregamos
+              <b
+                >segurança, confiabilidade e resultados que fazem sua operação
+                girar sem parar</b
+              >.
+            </p>
+            <!-- BOTÕES MISSÃO, VISÃO E VALORES - ESTILO QUADRADO COM ÍCONES -->
+<div class="row mt-1 pt-4">
+       <div class="col-12 d-flex flex-wrap justify-content-center btn-sobrenos">
+        <button class="btn-essence" data-target="missao">
+            <i class="fas fa-bullseye"></i>
+            <span>Missão</span>
+        </button>
+        <button class="btn-essence" data-target="visao">
+            <i class="fas fa-eye"></i>
+            <span>Visão</span>
+        </button>
+        <button class="btn-essence" data-target="valores">
+            <i class="fas fa-heart"></i>
+            <span>Valores</span>
+        </button>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOBRE 2 (PORTFÓLIO) -->
+    <div class="session-sobre" style="background: #e2e2e2">
+      <div class="container">
+        <div class="row row-center">
+          <div class="col-12 col-lg-6 order-lg-1">
+            <b style="color: var(--primary-color)">PORTFÓLIO</b><br>
+            <h2>Confira nossos trabalhos</h2>
+
+            <div class="col-12 col-lg-12 order-lg-2 mb-0 mt-4 mb-lg-0 ">
+              <div class="img-border">
+                <img
+                  src="./img/RetrofitCompleto.png"
+                  alt="Portfólio Eletromecânica Bazan"
+                  class="img-fluid"
+                  
+                  
+                />
+                <span class="tipo">Retrofit</span>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; position: relative; bottom: 20px">
+              Grupo Bimbo - Jaboatão dos Guararapes - PE Projeto: Cooler – Retrofit Completo - 2024.
+            </p>
+            <div class="mt-4">
+              <a href="Construção.html" class="link-btn"
+                >saiba mais
+                <img src="./img/arrow-right-2-svgrepo-com.svg" alt="Seta"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESTAQUES (SERVIÇOS) -->
+    <div class="session-destaques">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8 offset-lg-2 text-center">
+            <h2>Soluções confiáveis com qualidade e durabilidade</h2>
+            <p>
+              Através dos certificados ISO 9001:2015, garantimos aprimoramento
+              constante, trazendo ainda mais primazia e satisfação ao oferecer
+              nossos serviços.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="position-relative">
+              <div class="swiper" id="sliderDestaques">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a
+                      href="Construção.html"
+                      class="item-destaques"
+                      style="
+                        background: url('./img/Manutencao_Preditiva.png')
+                          center center no-repeat;
+                      "
+                    >
+                      <div>
+                        <img
+                          src=""
+                          alt="Manutenção Preditiva"
+                        />
+                        <h3>Manutenção Preditiva</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      href="Construção.html"
+                      class="item-destaques"
+                      style="
+                        background: url('https://via.placeholder.com/350x280')
+                          center center no-repeat;
+                      "
+                    >
+                      <div>
+                        <img
+                          src="https://via.placeholder.com/60"
+                          alt="Instalações Elétricas"
+                        />
+                        <h3>Instalações Elétricas</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      href="Construção.html"
+                      class="item-destaques"
+                      style="
+                        background: url('https://via.placeholder.com/350x280')
+                          center center no-repeat;
+                      "
+                    >
+                      <div>
+                        <img
+                          src="https://via.placeholder.com/60"
+                          alt="Automação Industrial"
+                        />
+                        <h3>Automação Industrial</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      href="Construção.html"
+                      class="item-destaques"
+                      style="
+                        background: url('https://via.placeholder.com/350x280')
+                          center center no-repeat;
+                      "
+                    >
+                      <div>
+                        <img
+                          src="https://via.placeholder.com/60"
+                          alt="Projetos Elétricos"
+                        />
+                        <h3>Projetos Elétricos</h3>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="item">  
-                    <a href=""></a> <i class="fa-brands fa-instagram"></i>
-                    <p>Instagram</p>
+                <div class="swiper-pagination" id="paginationDestaques"></div>
+                <div class="swiper-button-prev" id="prevDestaques"></div>
+                <div class="swiper-button-next" id="nextDestaques"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center mt-5">
+            <a href="Construção.html" class="link-btn"
+              >ver todos serviços
+              <img src="./img/arrow-right-2-svgrepo-com.svg" alt="Seta"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEPOIMENTOS -->
+    <div class="session-depoimentos">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Nossos <b>Clientes</b></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="position-relative">
+              <div class="swiper" id="sliderDepoimentos">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="row align-items-center">
+                      <div class="col-4 col-lg-2">
+                        <div class="img-depoimentos">
+                          <img
+                            src="./img/user-svgrepo-com.svg"
+                            alt="Cliente Felipe"
+                            class="img-fluid"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8 col-lg-10">
+                        <h5>Felipe / Sócio Proprietário</h5>
+                        <span
+                          >(Fabricante de máquinas e equipamentos para elevação
+                          de carga) - Atibaia – SP</span
+                        >
+                        <p>
+                          "A equipe completa, faz com que tenhamos total
+                          liberdade para acompanhar nossos projetos, e esse é o
+                          ponto alto da nossa parceria; com grande auxílio e
+                          respaldo da diretoria. Temos total confiança e amizade
+                          por toda Eletromecânica Bazan."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="row align-items-center">
+                      <div class="col-4 col-lg-2">
+                        <div class="img-depoimentos">
+                          <img
+                            src="./img/user-svgrepo-com.svg"
+                            alt="Cliente Carlos"
+                            class="img-fluid"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8 col-lg-10">
+                        <h5>Carlos / Comprador</h5>
+                        <span
+                          >(Fabricante de fornos de pizza) - Guarulhos –
+                          SP</span
+                        >
+                        <p>
+                          "Além de ser uma empresa séria, de qualidade e
+                          comprometida com o cliente, a Bazan com seu
+                          atendimento, nos proporcionou aumento na produtividade
+                          interna e demandas com os clientes."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="row align-items-center">
+                      <div class="col-4 col-lg-2">
+                        <div class="img-depoimentos">
+                          <img
+                            src="./img/user-svgrepo-com.svg"
+                            alt="Cliente João"
+                            class="img-fluid"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8 col-lg-10">
+                        <h5>João Batista / Engenheiro de Processos</h5>
+                        <span>(AgroVale S.A.) - Ribeirão Preto - SP</span>
+                        <p>
+                          "Durante a safra, cada minuto de máquina parada custa
+                          caro. A Bazan foi essencial para manter nossa planta
+                          em funcionamento contínuo. O suporte foi rápido e
+                          assertivo."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="swiper-pagination" id="paginationDepoimentos"></div>
+              </div>
             </div>
-            <div id="items">
-                <img src="/img/smartphoneBazan.png" alt="" class="smartphone">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="session-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+              <span
+                >Estrada Municipal, 498 - Recreio Rio Bonito<br />Suzano/SP -
+                08635-450</span
+              >
+              <span
+                >Rua Diário de Pernambuco, s/n - Garapu<br />Cabo de Santo
+                Agostinho/PE - 54518-285</span
+              >
+              <div class="my-3">
+                <span class="d-block"
+                  ><i class="fa fa-phone"></i> (11) 4751-3446</span
+                >
+                <span class="d-block"
+                  ><i class="fa fa-envelope"></i>
+                  contato@eletromecanicabazan.com.br</span
+                >
+              </div>
+              <div class="redes">
+                <a
+                  href="https://www.instagram.com/eletromecanicabazan/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/eletromecanicabazan"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+              <div class="mt-3">
+                <b>Horário de Funcionamento</b><br />
+                Segunda a Sexta – 7h00 às 17h00
+              </div>
             </div>
-                <div class="item">
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.5597177349854!2d-46.330087514563424!3d-23.66741416542282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce738ac836242f%3A0x7015a5e695b8807!2sEletromec%C3%A2nica%20Bazan!5e0!3m2!1spt-BR!2sbr!4v1738848788262!5m2!1spt-BR!2sbr"
-                        width="240" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p>Google Maps</p>
-                </div>
+            <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+              <ul class="nav-footer">
+                <li class="menu-item current_page_item">
+                  <a href="index.html">Início</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Quem somos</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Nossos Serviços</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Portfólio</a>
+                </li>
+                <li class="menu-item">
+                  <a href="Construção.html">Contato</a>
+                </li>
+              </ul>
             </div>
-        </div>
-        <section id="email">
-            <div class="email-conteiner">
-                <form id="contact-form" target="_blank" rel="noopener noreferrer" action="https://formspree.io/f/xldgljlr"
-                    method="POST">
-                    <label>
-                        Seu email:
-                        <input type="email" name="email">
-                    </label>
-                    <label>
-                        Sua messagem:
-                        <textarea name="message"></textarea>
-                    </label>
-                    <!-- your other form fields go here -->
-                    <button type="submit">Enviar</button>
-                </form>
+            <div class="col-12 col-lg-3 text-center text-lg-right">
+              <a href="Construção.html" class="link-btn"
+                >faça <b>uma cotação</b>
+                <img src="./img/arrow-right-2-svgrepo-com.svg" alt="Seta"
+              /></a>
             </div>
-        </section>
-    </section>
-   
-    <section id="about">
-        <div class="headline">
-            Quem somos nós
+          </div>
         </div>
-        <div id="about-conteiner">
-            <div class="about">
-                <img src="/img/person-2.jpeg" alt="" class="about-image">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime nobis, blanditiis eligendi sapiente
-                    omnis deleniti voluptas sint tempora nesciunt exercitationem repellat accusamus officia id quas ea
-                    aliquid quaerat doloribus? Nihil, molestiae? Adipisci nulla sapiente est, praesentium a facilis
-                    ipsam perferendis.</p>
+      </div>
+      <div class="maps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.238836429123!2d-46.32944119999999!3d-23.667415399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce738ac836242f%3A0x7015a5e695b8807!2sEletromec%C3%A2nica%20Bazan!5e0!3m2!1spt-BR!2sbr!4v1757369372653!5m2!1spt-BR!2sbr"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0332413318793!2d-35.02500828891527!3d-8.299490683456364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefe97e529239%3A0x696a599e328090af!2sR.%20Di%C3%A1rio%20de%20Pernambuco%2C%2083%20-%20Garapu%2C%20Cabo%20de%20Santo%20Agostinho%20-%20PE%2C%2054518-285!5e0!3m2!1spt-BR!2sbr!4v1757369312118!5m2!1spt-BR!2sbr"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="copy">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 text-center text-lg-left">
+              Copyright © 2025 Eletromecânica Bazan - Todos os direitos
+              reservados
             </div>
+            <div class="col-12 col-lg-6 text-center text-lg-right mt-2 mt-lg-0">
+              <a href="https://www.dotincbr.com.br" target="_blank"
+                >desenvolvido por DotIncBR</a
+              >
+            </div>
+          </div>
         </div>
-    </section>
-    <section id="gallery">
-        <div class="headline">
-            Galeria
-        </div>
-        <div id="gallery-conteiner">
-            <img src="/img/bimboEsteiraAlto.jpg" alt="" class="gallery-image">
-            <img src="/img/maximusbobina.jpg" alt="" class="gallery-image">
-            <img src="/img/chocotone.jpg" alt="" class="gallery-image">
-            <img src="/img/bolachaaguasal.jpg" alt="" class="gallery-image">
-        </div>
-    </section>
-    <footer id="footer">
-        <p>CopyWrite 2025 - Todos os direitos reservados.</p>
-        <p>Feito por EletroMecânica Bazan</p>
+      </div>
     </footer>
-    <!-- icones -->
-    <script src="https://kit.fontawesome.com/f7c78110bd.js" crossorigin="anonymous"></script>
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <!-- Our JS file -->
-    <script src="js/main.js"></script>
+    <!-- MODAL MISSÃO -->
+<div class="modal-overlay" id="modal-missao">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h3 class="modal-title">Nossa Missão</h3>
+        <p class="modal-text">
+            Entregar soluções eletromecânicas com excelência, segurança e inovação, garantindo operação contínua e resultados reais para nossos clientes.
+        </p>
+    </div>
+</div>
 
-</body>
+<!-- MODAL VISÃO -->
+<div class="modal-overlay" id="modal-visao">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h3 class="modal-title">Nossa Visão</h3>
+        <p class="modal-text">
+            Ser reconhecida até 2030 como a principal parceira estratégica em soluções eletromecânicas para indústrias de grande porte no Brasil.
+        </p>
+    </div>
+</div>
 
+<!-- MODAL VALORES -->
+<div class="modal-overlay" id="modal-valores">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h3 class="modal-title">Nossos Valores</h3>
+        <p class="modal-text">
+            Ética, compromisso, excelência técnica, inovação constante e respeito ao cliente e ao meio ambiente.
+        </p>
+    </div>
+</div>
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <span class="seta-up" id="backToTop"><i class="fa fa-angle-up"></i></span>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // =============================================
+      // ELETROMECÂNICA BAZAN - custom.js (JS PURO SEM JQUERY)
+      // Desenvolvido por Qwen para DotIncBR
+      // =============================================
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. MENU MOBILE HAMBURGUER
+        const hamburger = document.querySelector(".ic-menu");
+        const mobileMenu = document.querySelector(".content-nav");
+        const navLinks = document.querySelectorAll(".nav a");
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+          });
+
+          // Fechar menu ao clicar em qualquer link
+          navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.remove("active");
+            });
+          });
+        }
+
+        // 2. HEADER STICKY
+        const header = document.querySelector(".header");
+        if (header) {
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 100) {
+              header.classList.add("scrolled");
+            } else {
+              header.classList.remove("scrolled");
+            }
+          });
+        }
+
+        // 3. BOTÃO VOLTAR AO TOPO
+        const backToTopButton = document.querySelector(".seta-up");
+        if (backToTopButton) {
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+              backToTopButton.style.display = "flex";
+            } else {
+              backToTopButton.style.display = "none";
+            }
+          });
+
+          backToTopButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+        }
+
+        // 4. SMOOTH SCROLL PARA ÂNCORAS
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              const headerOffset = 100;
+              const elementPosition = targetElement.offsetTop;
+              const offsetPosition = elementPosition - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // 5. INICIALIZAÇÃO DOS SLIDERS (Swiper.js)
+        if (typeof Swiper !== "undefined") {
+          // Slider Destaques (Serviços)
+          const swiperDestaques = new Swiper("#sliderDestaques", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+              el: "#paginationDestaques",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: "#nextDestaques",
+              prevEl: "#prevDestaques",
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 4,
+              },
+            },
+          });
+
+          // ANIMAÇÃO AO ROLAR: FADE IN DOWN PARA O LOGO
+          const logoElement = document.querySelector(".fadeInDown");
+          if (logoElement) {
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    // ADICIONA A CLASSE PARA ANIMAR
+                    entry.target.classList.add("appear");
+                  } else {
+                    // REMOVE A CLASSE PARA RESETAR A ANIMAÇÃO
+                    entry.target.classList.remove("appear");
+                  }
+                });
+              },
+              {
+                threshold: 0.8, // Dispara quando 10% do elemento estiver visível
+                rootMargin: "0px 0px -50px 0px", // Opcional: ativa um pouco antes de entrar totalmente
+              }
+            );
+
+            observer.observe(logoElement);
+          }
+
+          // Slider Depoimentos
+          const swiperDepoimentos = new Swiper("#sliderDepoimentos", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: "#paginationDepoimentos",
+              clickable: true,
+            },
+          });
+        }
+      });
+
+      // MODAL MISSÃO, VISÃO E VALORES
+const modalButtons = document.querySelectorAll('.btn-essence');
+const modals = document.querySelectorAll('.modal-overlay');
+const closeButtons = document.querySelectorAll('.close-modal');
+
+// Abrir modal ao clicar no botão
+modalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        const modal = document.getElementById(`modal-${target}`);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Bloqueia scroll
+        }
+    });
+});
+
+// Fechar modal ao clicar no X
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal-overlay');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Libera scroll
+    });
+});
+
+// Fechar modal ao clicar fora do conteúdo
+modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+    </script>
+  </body>
 </html>
