@@ -14,7 +14,7 @@
     />
     <link
       rel="shortcut icon"
-      href="./img/Logo_Bazan_Industrial_DetalheAzul.png"
+      href="./img/img_logo_bazan_metalazul.png"
       type="image/x-icon"
     />
 
@@ -33,16 +33,29 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mobile&&icon_names=chat_bubble"
+    />
+
     <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- FlatIcon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
 
     <style>
       /* =============================================
            ELETROMECÂNICA BAZAN - CSS COMPLETO
-           Baseado no layout da Inoxmaia, personalizado para Bazan
            ============================================= */
 
       :root {
@@ -125,7 +138,8 @@
       }
 
       .ic-menu {
-        background: url("./img/menu-svg.svg") center center no-repeat;
+        background: url("./img/icon_menu_hamburguer_azulepreto.svg") center
+          center no-repeat;
         background-size: cover;
         display: inline-block;
         color: var(--dark-color);
@@ -180,7 +194,8 @@
         height: 100%;
         display: flex;
         align-items: center;
-        background: url("./img/HomemSoldando.png") center center no-repeat;
+        background: url("./img/img_hero_homemsoldando.png") center center
+          no-repeat;
         background-size: cover;
         position: relative;
       }
@@ -528,21 +543,60 @@
       }
 
       /* MAPS */
-      .maps {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: stretch;
-      }
+    /* CONTAINER PRINCIPAL DOS MAPAS */
+.maps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px 0;
+    justify-content: center;
+}
 
-      .maps > iframe {
-        box-sizing: border-box;
-        flex: 0 0 calc(50% - 10px);
-        width: calc(50% - 10px);
-        min-width: 300px;
-        height: 450px;
-        border: 0;
-      }
+/* ESTILO DE CADA MAPA */
+.map-box {
+    flex: 1 1 calc(50% - 12.5px); /* 2 colunas em desktop */
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.map-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* TÍTULO DO MAPA */
+.map-header {
+    background: #4765E4;
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* CONTAINER DO IFRAME (PROPORÇÃO 16:9) */
+.map-embed {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+}
+
+.map-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
       /* BOTÃO VOLTAR AO TOPO */
       .seta-up {
@@ -639,127 +693,152 @@
       .btn-sobrenos {
         gap: 16px;
       }
-.btn-essence {
-    background: #f8f9fa; /* Cinza claro */
-    color: #555;
-    border: none;
-    width: 140px;
-    height: 140px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 15px;
-}
+      .btn-essence {
+        background: #f8f9fa; /* Cinza claro */
+        color: #555;
+        border: none;
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 15px;
+      }
 
-.btn-essence i {
-    font-size: 28px;
-    transition: all 0.3s ease;
-}
+      .btn-essence i {
+        font-size: 28px;
+        transition: all 0.3s ease;
+      }
 
-.btn-essence:hover {
-    background: #4765E4; /* Azul da Bazan */
-    color: white;
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(71, 101, 228, 0.3);
-}
+      .btn-essence:hover {
+        background: #4765e4; /* Azul da Bazan */
+        color: white;
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(71, 101, 228, 0.3);
+      }
 
-.btn-essence:hover i {
-    color: white;
-}
+      .btn-essence:hover i {
+        color: white;
+      }
 
-/* ESTILO DO MODAL OVERLAY */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-}
+      /* ESTILO DO MODAL OVERLAY */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+      }
 
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
 
-/* ESTILO DO MODAL CONTEÚDO */
-.modal-content {
-    background: white;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 12px;
-    padding: 40px;
-    position: relative;
-    transform: translateY(-30px);
-    opacity: 0;
-    transition: all 0.4s ease;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-}
+      /* ESTILO DO MODAL CONTEÚDO */
+      .modal-content {
+        background: white;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 12px;
+        padding: 40px;
+        position: relative;
+        transform: translateY(-30px);
+        opacity: 0;
+        transition: all 0.4s ease;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
 
-.modal-overlay.active .modal-content {
-    transform: translateY(0);
-    opacity: 1;
-}
+      .modal-overlay.active .modal-content {
+        transform: translateY(0);
+        opacity: 1;
+      }
 
-/* ESTILO DO BOTÃO DE FECHAR */
-.close-modal {
+      /* ESTILO DO BOTÃO DE FECHAR */
+      .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #aaa;
+        transition: color 0.3s;
+      }
+
+      .close-modal:hover {
+        color: #4765e4;
+      }
+
+      /* ESTILO DO TÍTULO DO MODAL */
+      .modal-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .modal-title:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: #4765e4;
+      }
+
+      /* ESTILO DO TEXTO DO MODAL */
+      .modal-text {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+      }
+
+      .btn-go {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #aaa;
-    transition: color 0.3s;
-}
-
-.close-modal:hover {
-    color: #4765E4;
-}
-
-/* ESTILO DO TÍTULO DO MODAL */
-.modal-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.modal-title:after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 3px;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
     background: #4765E4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+    font-size: 18px;
 }
 
-/* ESTILO DO TEXTO DO MODAL */
-.modal-text {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
+.btn-go:hover {
+    background: #3a56c5;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
       /* RESPONSIVO */
 
@@ -813,7 +892,6 @@
         .session-footer span {
           font-size: 16px !important;
         }
-  
       }
       @media screen and (max-width: 900px) {
         .nav {
@@ -895,9 +973,8 @@
         }
 
         .content-nav.active .nav .menu-item a:hover {
-          background:var(--primary-color);
+          background: var(--primary-color);
           color: var(--light-color);
-      
         }
 
         .nav {
@@ -952,12 +1029,12 @@
         }
       }
 
-      @media (max-width: 700px) {
-        .maps > iframe {
-          flex: 0 0 100%;
-          width: 100%;
-        }
-      }
+  /* RESPONSIVO: MOBILE */
+@media (max-width: 768px) {
+    .map-box {
+        flex: 1 1 100%; /* 1 coluna em mobile */
+    }
+}
 
       @media screen and (max-width: 480px) {
         .hero-content h1 {
@@ -973,9 +1050,10 @@
   <body>
     <!-- WHATSAPP FLOAT -->
     <a
-      href="https://wa.me/5511999999999"
+      href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Eletromec%C3%A2nica%20Bazan."
       class="whatsapp-float"
       target="_blank"
+      text-decoration="none"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
@@ -987,7 +1065,7 @@
           <div class="col-6 col-lg-2">
             <a href="index.html">
               <img
-                src="./img/LogoBazanPretoBrancoEscrita.svg"
+                src="./img/img_logo_bazan_escalacinza_escrita.svg"
                 alt="Logo Eletromecânica Bazan"
                 class="img-fluid"
                 style="height: 70px"
@@ -996,7 +1074,8 @@
           </div>
           <div class="col-6 col-lg-3 d-none d-lg-block">
             <span class="slogan"
-              >Eletromecânica Bazan <br />
+              ><b style="color: var(--primary-color)">Eletromecânica Bazan</b>
+              <br />
               Mais de 10 anos de experiência</span
             >
           </div>
@@ -1005,11 +1084,17 @@
           </div>
           <div class="col-12 col-lg-7 text-lg-right">
             <span class="d-none d-lg-block" style="margin-right: 15px">
-              <i
-                class="fa fa-whatsapp-square"
-                style="color: var(--whatsapp-color)"
-              ></i>
-              11 99999-9999
+              <a
+                href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Eletromec%C3%A2nica%20Bazan."
+                target="_blank"
+                text-decoration="none"
+              >
+                <i
+                  class="fab fa-whatsapp"
+                  style="color: var(--whatsapp-color)"
+                ></i>
+                11 4751-3446</a
+              >
             </span>
             <div class="content-nav" id="mobileMenu">
               <ul class="nav">
@@ -1017,16 +1102,10 @@
                   <a href="index.html">Início</a>
                 </li>
                 <li class="menu-item">
-                  <a href="Construção.html">Quem Somos</a>
-                </li>
-                <li class="menu-item">
                   <a href="Construção.html">Nossos Serviços</a>
                 </li>
                 <li class="menu-item">
                   <a href="Construção.html">Portfólio</a>
-                </li>
-                <li class="menu-item">
-                  <a href="Construção.html">Contato</a>
                 </li>
               </ul>
             </div>
@@ -1047,7 +1126,11 @@
                   Desde 2011, transformando desafios em soluções com precisão,
                   confiança e resultado real.
                 </p>
-                <a href="Construção.html" class="btn-hero"
+                <a
+                href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Eletromec%C3%A2nica%20Bazan."
+                target="_blank"
+                text-decoration="none"
+                class="btn-hero"
                   >Solicite um Orçamento</a
                 >
               </div>
@@ -1063,44 +1146,47 @@
         <div class="row row-center">
           <div class="col-12 col-lg-3 text-center mb-4 mb-lg-0">
             <img
-              src="./img/LogoBazanPretoBranco.svg"
+              src="./img/img_logo_bazan_escalacinza.svg"
               alt="Ícone Eletromecânica Bazan"
               class="img-fluid max-img fadeInDown"
               style="max-width: 200px"
             />
           </div>
           <div class="col-12 col-lg-8">
-             <b style="color: var(--primary-color)">Sobre Nós</b><br>
-             <h2>Conheça Nossa <b>Essência</b></h2>
+            <b style="color: var(--primary-color)">Sobre Nós</b><br />
+            <h2>Conheça Nossa <b>Essência</b></h2>
             <p class="hist-bazan">
               Em <b>1º de setembro de 2011</b>, pai e filho transformaram um
               sonho em legado: a <b>Eletromecânica Bazan</b>. Mais de 13 anos
               depois, somos parceiros de gigantes como
-              <b>Grupo Bimbo, Panco e LPG Foods</b> — não por acaso, mas pela
+              <b>Grupo Bimbo, Panco e LPG Foods</b> reforçando sua credibilidade
+              no setor. — não por acaso, mas pela
               <b>excelência consistente e entrega com alma</b>. Não entregamos
               apenas serviços. Entregamos
-              <b
-                >segurança, confiabilidade e resultados que fazem sua operação
-                girar sem parar</b
+              <b style="color: var(--primary-color)"
+                >segurança, experiência, confiabilidade e resultados que fazem
+                sua operação girar sem parar</b
               >.
             </p>
             <!-- BOTÕES MISSÃO, VISÃO E VALORES - ESTILO QUADRADO COM ÍCONES -->
-<div class="row mt-1 pt-4">
-       <div class="col-12 d-flex flex-wrap justify-content-center btn-sobrenos">
-        <button class="btn-essence" data-target="missao">
-            <i class="fas fa-bullseye"></i>
-            <span>Missão</span>
-        </button>
-        <button class="btn-essence" data-target="visao">
-            <i class="fas fa-eye"></i>
-            <span>Visão</span>
-        </button>
-        <button class="btn-essence" data-target="valores">
-            <i class="fas fa-heart"></i>
-            <span>Valores</span>
-        </button>
-    </div>
-</div>
+            <div class="row mt-1 pt-4">
+              <div
+                class="col-12 d-flex flex-wrap justify-content-center btn-sobrenos"
+              >
+                <button class="btn-essence" data-target="missao">
+                  <i class="fas fa-bullseye"></i>
+                  <span>Missão</span>
+                </button>
+                <button class="btn-essence" data-target="visao">
+                  <i class="fas fa-eye"></i>
+                  <span>Visão</span>
+                </button>
+                <button class="btn-essence" data-target="valores">
+                  <i class="fas fa-heart"></i>
+                  <span>Valores</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1111,28 +1197,27 @@
       <div class="container">
         <div class="row row-center">
           <div class="col-12 col-lg-6 order-lg-1">
-            <b style="color: var(--primary-color)">PORTFÓLIO</b><br>
+            <b style="color: var(--primary-color)">PORTFÓLIO</b><br />
             <h2>Confira nossos trabalhos</h2>
 
-            <div class="col-12 col-lg-12 order-lg-2 mb-0 mt-4 mb-lg-0 ">
+            <div class="col-12 col-lg-12 order-lg-2 mb-0 mt-4 mb-lg-0">
               <div class="img-border">
                 <img
-                  src="./img/RetrofitCompleto.png"
+                  src="./img/img_portifolio_RetrofitCompleto.png"
                   alt="Portfólio Eletromecânica Bazan"
                   class="img-fluid"
-                  
-                  
                 />
                 <span class="tipo">Retrofit</span>
               </div>
             </div>
             <p style="font-size: 0.8rem; position: relative; bottom: 20px">
-              Grupo Bimbo - Jaboatão dos Guararapes - PE Projeto: Cooler – Retrofit Completo - 2024.
+              Grupo Bimbo - Jaboatão dos Guararapes - PE Projeto: Cooler –
+              Retrofit Completo - 2024.
             </p>
             <div class="mt-4">
               <a href="Construção.html" class="link-btn"
                 >saiba mais
-                <img src="./img/arrow-right-2-svgrepo-com.svg" alt="Seta"
+                <img src="./img/icon_seta_pdireita.svg" alt="icon_seta_pdireita"
               /></a>
             </div>
           </div>
@@ -1147,9 +1232,8 @@
           <div class="col-12 col-lg-8 offset-lg-2 text-center">
             <h2>Soluções confiáveis com qualidade e durabilidade</h2>
             <p>
-              Através dos certificados ISO 9001:2015, garantimos aprimoramento
-              constante, trazendo ainda mais primazia e satisfação ao oferecer
-              nossos serviços.
+              Garantimos aprimoramento constante, trazendo ainda mais primazia e
+              satisfação ao oferecer nossos serviços.
             </p>
           </div>
         </div>
@@ -1163,15 +1247,12 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('./img/Manutencao_Preditiva.png')
-                          center center no-repeat;
-                      "
+                        background: url('./img/img_servicos_manut_preditiv2.png') center center no-repeat;
+                     background-size: cover;
+                     "
                     >
                       <div>
-                        <img
-                          src=""
-                          alt="Manutenção Preditiva"
-                        />
+                        <img src="./img/icon_servicos_grafico_manut_preditiv.svg" alt="Manutenção Preditiva" />
                         <h3>Manutenção Preditiva</h3>
                       </div>
                     </a>
@@ -1181,16 +1262,16 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('https://via.placeholder.com/350x280')
-                          center center no-repeat;
+                        background: url('./img/img_servicos_manut_prevent1.jpeg') center center no-repeat;
+                        background-size: cover;
                       "
                     >
                       <div>
                         <img
-                          src="https://via.placeholder.com/60"
-                          alt="Instalações Elétricas"
+                          src="./img/icon_servicos_checklist_manut_preventiv.svg"
+                          alt="Manutençao Preventiva"
                         />
-                        <h3>Instalações Elétricas</h3>
+                        <h3>Manutenção Preventiva</h3>
                       </div>
                     </a>
                   </div>
@@ -1199,16 +1280,16 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('https://via.placeholder.com/350x280')
-                          center center no-repeat;
-                      "
-                    >
+                        background: url('./img/img_servicos_manut_correctiv1.jpg') center center no-repeat;
+                        background-size: cover;
+                      ">       
+
                       <div>
                         <img
-                          src="https://via.placeholder.com/60"
-                          alt="Automação Industrial"
+                          src="./img/icon_servicos_porca_manut_correctiv.svg"
+                          alt="Manutenção Corretiva"
                         />
-                        <h3>Automação Industrial</h3>
+                        <h3>Manutenção Corretiva</h3>
                       </div>
                     </a>
                   </div>
@@ -1217,16 +1298,36 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('https://via.placeholder.com/350x280')
+                        background: url('./img/img_servicos_project2.jpg')
                           center center no-repeat;
+                          background-size: cover; 
                       "
                     >
                       <div>
                         <img
-                          src="https://via.placeholder.com/60"
-                          alt="Projetos Elétricos"
+                          src="./img/icon_servicos_lapis_project1.svg"
+                          alt="Projetos Sob Medida"
                         />
-                        <h3>Projetos Elétricos</h3>
+                        <h3>Projetos Sob Medida</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a
+                      href="Construção.html"
+                      class="item-destaques"
+                      style="
+                        background: url('./img/img_servic0s_servindustries2_solda.jpg')
+                          center center no-repeat;
+                          background-size: cover;
+                      "
+                    >
+                      <div>
+                        <img
+                          src="./img/icon_servicos_maskweld_servindustries.svg"
+                          alt="Serviços industriais"
+                        />
+                        <h3>Serviços Industriais</h3>
                       </div>
                     </a>
                   </div>
@@ -1240,7 +1341,7 @@
           <div class="col-12 text-center mt-5">
             <a href="Construção.html" class="link-btn"
               >ver todos serviços
-              <img src="./img/arrow-right-2-svgrepo-com.svg" alt="Seta"
+              <img src="./img/icon_seta_pdireita.svg" alt="Seta"
             /></a>
           </div>
         </div>
@@ -1265,17 +1366,17 @@
                       <div class="col-4 col-lg-2">
                         <div class="img-depoimentos">
                           <img
-                            src="./img/user-svgrepo-com.svg"
-                            alt="Cliente Felipe"
+                            src="./img/icon_usuario_azulepreto.svg"
+                            alt="Cliente Fylipe"
                             class="img-fluid"
                           />
                         </div>
                       </div>
                       <div class="col-8 col-lg-10">
-                        <h5>Felipe / Sócio Proprietário</h5>
+                        <h5>Fylipe / Sócio Proprietário</h5>
                         <span
                           >(Fabricante de máquinas e equipamentos para elevação
-                          de carga) - Atibaia – SP</span
+                          de carga) - Suzano – SP</span
                         >
                         <p>
                           "A equipe completa, faz com que tenhamos total
@@ -1292,7 +1393,7 @@
                       <div class="col-4 col-lg-2">
                         <div class="img-depoimentos">
                           <img
-                            src="./img/user-svgrepo-com.svg"
+                            src="./img/icon_usuario_azulepreto.svg"
                             alt="Cliente Carlos"
                             class="img-fluid"
                           />
@@ -1318,7 +1419,7 @@
                       <div class="col-4 col-lg-2">
                         <div class="img-depoimentos">
                           <img
-                            src="./img/user-svgrepo-com.svg"
+                            src="./img/icon_usuario_azulepreto.svg"
                             alt="Cliente João"
                             class="img-fluid"
                           />
@@ -1351,10 +1452,12 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+              <b style="color: var(--primary-color)">Unidade I:</b><br>
               <span
                 >Estrada Municipal, 498 - Recreio Rio Bonito<br />Suzano/SP -
                 08635-450</span
-              >
+              ><br>
+               <b style="color: var(--primary-color)">Unidade II:</b><br>
               <span
                 >Rua Diário de Pernambuco, s/n - Garapu<br />Cabo de Santo
                 Agostinho/PE - 54518-285</span
@@ -1365,12 +1468,19 @@
                 >
                 <span class="d-block"
                   ><i class="fa fa-envelope"></i>
-                  contato@eletromecanicabazan.com.br</span
+                  <a href="mailto:carol@eletromecanicabazan.com.br">
+                    carol@eletromecanicabazan.com.br
+                </a><br>
+                <i class="fa fa-envelope"></i>
+                  <a href="mailto:talita@eletromecanicabazan.com.br">
+                    talita@eletromecanicabazan.com.br
+                </a>
+                </span
                 >
               </div>
               <div class="redes">
                 <a
-                  href="https://www.instagram.com/eletromecanicabazan/"
+                  href="https://www.instagram.com/eletromecanicabazan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   ><i class="fab fa-instagram"></i
                 ></a>
@@ -1380,8 +1490,8 @@
                   ><i class="fab fa-linkedin"></i
                 ></a>
               </div>
-              <div class="mt-3">
-                <b>Horário de Funcionamento</b><br />
+              <div class="mt-3" style="color: var(--light-color)">
+                <b style="color: var(--primary-color)">Horário de Funcionamento</b><br />
                 Segunda a Sexta – 7h00 às 17h00
               </div>
             </div>
@@ -1390,41 +1500,68 @@
                 <li class="menu-item current_page_item">
                   <a href="index.html">Início</a>
                 </li>
-                <li class="menu-item">
-                  <a href="Construção.html">Quem somos</a>
-                </li>
+             
                 <li class="menu-item">
                   <a href="Construção.html">Nossos Serviços</a>
                 </li>
                 <li class="menu-item">
                   <a href="Construção.html">Portfólio</a>
                 </li>
-                <li class="menu-item">
-                  <a href="Construção.html">Contato</a>
-                </li>
+             
               </ul>
             </div>
             <div class="col-12 col-lg-3 text-center text-lg-right">
               <a href="Construção.html" class="link-btn"
-                >faça <b>uma cotação</b>
-                <img src="./img/arrow-right-2-svgrepo-com.svg" alt="Seta"
+                > <b style="color: var(--primary-color)">Mande a sua ideia pra gente </b>
+                <img src="./img/icon_voltar_topo.svg" alt="Seta"
               /></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.238836429123!2d-46.32944119999999!3d-23.667415399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce738ac836242f%3A0x7015a5e695b8807!2sEletromec%C3%A2nica%20Bazan!5e0!3m2!1spt-BR!2sbr!4v1757369372653!5m2!1spt-BR!2sbr"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0332413318793!2d-35.02500828891527!3d-8.299490683456364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefe97e529239%3A0x696a599e328090af!2sR.%20Di%C3%A1rio%20de%20Pernambuco%2C%2083%20-%20Garapu%2C%20Cabo%20de%20Santo%20Agostinho%20-%20PE%2C%2054518-285!5e0!3m2!1spt-BR!2sbr!4v1757369312118!5m2!1spt-BR!2sbr"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+     <div class="maps-container">
+    <!-- MAPA 1: SUZANO/SP -->
+    <div class="map-box">
+        <div class="map-header">Suzano/SP - Matriz</div>
+        <div class="map-embed">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.238836429123!2d-46.32944119999999!3d-23.667415399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce738ac836242f%3A0x7015a5e695b8807!2sEletromec%C3%A2nica%20Bazan!5e0!3m2!1spt-BR!2sbr!4v1757369372653!5m2!1spt-BR!2sbr"
+                allowfullscreen
+                loading="lazy"
+                title="Localização da Matriz em Suzano/SP"
+                aria-label="Mapa da Matriz da Eletromecânica Bazan em Suzano, São Paulo"
+            ></iframe>
+            <!-- ÍCONE "IR" SOBREPOSTO NO TOPO DIREITO -->
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Municipal,+271+-+Recreio+Rio+Bonito,+Suzano+-+SP,+08635-450" 
+               target="_blank" 
+               class="btn-go top-right"
+               title="Traçar rota para Suzano/SP">
+                <i class="fas fa-directions"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAPA 2: CABO DE SANTO AGOSTINHO/PE -->
+    <div class="map-box">
+        <div class="map-header">Cabo de Santo Agostinho/PE - Filial</div>
+        <div class="map-embed">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0332413318793!2d-35.02500828891527!3d-8.299490683456364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefe97e529239%3A0x696a599e328090af!2sR.%20Di%C3%A1rio%20de%20Pernambuco%2C%2083%20-%20Garapu%2C%20Cabo%20de%20Santo%20Agostinho%20-%20PE%2C%2054518-285!5e0!3m2!1spt-BR!2sbr!4v1757369312118!5m2!1spt-BR!2sbr"
+                allowfullscreen
+                loading="lazy"
+                title="Localização da Filial em Cabo de Santo Agostinho/PE"
+                aria-label="Mapa da Filial da Eletromecânica Bazan em Cabo de Santo Agostinho, Pernambuco"
+            ></iframe>
+             <!-- ÍCONE "IR" SOBREPOSTO NO TOPO DIREITO -->
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Di%C3%A1rio+de+Pernambuco,+s%2Fn+-+Garapu,+Cabo+de+Santo+Agostinho+-+PE,+54518-285" 
+               target="_blank" 
+               class="btn-go top-right"
+               title="Traçar rota para Cabo de Santo Agostinho/PE">
+                <i class="fas fa-directions"></i>
+            </a>
+        </div>
+    </div>
+</div>
       <div class="copy">
         <div class="container">
           <div class="row">
@@ -1433,9 +1570,9 @@
               reservados
             </div>
             <div class="col-12 col-lg-6 text-center text-lg-right mt-2 mt-lg-0">
-              <a href="https://www.dotincbr.com.br" target="_blank"
-                >desenvolvido por DotIncBR</a
-              >
+              <a href="https://www.dotincbr.com.br" target="_blank">desenvolvido por DotIncBR <i class="fi fi-bs-mug-hot"  style="color: var(--primary-color)"></i>
+              </a>
+              
             </div>
           </div>
         </div>
@@ -1443,37 +1580,45 @@
     </footer>
 
     <!-- MODAL MISSÃO -->
-<div class="modal-overlay" id="modal-missao">
-    <div class="modal-content">
+    <div class="modal-overlay" id="modal-missao">
+      <div class="modal-content">
         <button class="close-modal">&times;</button>
         <h3 class="modal-title">Nossa Missão</h3>
         <p class="modal-text">
-            Entregar soluções eletromecânicas com excelência, segurança e inovação, garantindo operação contínua e resultados reais para nossos clientes.
+          Oferecer soluções eficientes em manutenção industrial, usinagem e
+          solda, com foco em qualidade, segurança e confiabilidade.
+          <!-- Entregar soluções eletromecânicas com excelência, segurança e inovação, garantindo operação contínua e resultados reais para nossos clientes. -->
         </p>
+      </div>
     </div>
-</div>
 
-<!-- MODAL VISÃO -->
-<div class="modal-overlay" id="modal-visao">
-    <div class="modal-content">
+    <!-- MODAL VISÃO -->
+    <div class="modal-overlay" id="modal-visao">
+      <div class="modal-content">
         <button class="close-modal">&times;</button>
         <h3 class="modal-title">Nossa Visão</h3>
         <p class="modal-text">
-            Ser reconhecida até 2030 como a principal parceira estratégica em soluções eletromecânicas para indústrias de grande porte no Brasil.
+          Ser referência nacional em serviços de manutenção industrial,
+          reconhecida pela excelência, inovação e construção de parcerias
+          sólidas.
+          <!-- Ser reconhecida até 2030 como a principal parceira estratégica em soluções eletromecânicas para indústrias de grande porte no Brasil. -->
         </p>
+      </div>
     </div>
-</div>
 
-<!-- MODAL VALORES -->
-<div class="modal-overlay" id="modal-valores">
-    <div class="modal-content">
+    <!-- MODAL VALORES -->
+    <div class="modal-overlay" id="modal-valores">
+      <div class="modal-content">
         <button class="close-modal">&times;</button>
         <h3 class="modal-title">Nossos Valores</h3>
         <p class="modal-text">
-            Ética, compromisso, excelência técnica, inovação constante e respeito ao cliente e ao meio ambiente.
+          Valorizamos a ética e transparência em todas as relações, pelo
+          compromisso com a qualidade e a satisfação dos clientes, pela busca
+          constante por inovação e melhoria contínua.
+          <!-- Ética, compromisso, excelência técnica, inovação constante e respeito ao cliente e ao meio ambiente. -->
         </p>
+      </div>
     </div>
-</div>
     <!-- BOTÃO VOLTAR AO TOPO -->
     <span class="seta-up" id="backToTop"><i class="fa fa-angle-up"></i></span>
 
@@ -1482,8 +1627,8 @@
 
     <script>
       // =============================================
-      // ELETROMECÂNICA BAZAN - custom.js (JS PURO SEM JQUERY)
-      // Desenvolvido por Qwen para DotIncBR
+      // ELETROMECÂNICA BAZAN - custom.js
+      // Desenvolvido por DotIncBR
       // =============================================
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -1624,40 +1769,40 @@
       });
 
       // MODAL MISSÃO, VISÃO E VALORES
-const modalButtons = document.querySelectorAll('.btn-essence');
-const modals = document.querySelectorAll('.modal-overlay');
-const closeButtons = document.querySelectorAll('.close-modal');
+      const modalButtons = document.querySelectorAll(".btn-essence");
+      const modals = document.querySelectorAll(".modal-overlay");
+      const closeButtons = document.querySelectorAll(".close-modal");
 
-// Abrir modal ao clicar no botão
-modalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const target = button.getAttribute('data-target');
-        const modal = document.getElementById(`modal-${target}`);
-        if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Bloqueia scroll
-        }
-    });
-});
+      // Abrir modal ao clicar no botão
+      modalButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-target");
+          const modal = document.getElementById(`modal-${target}`);
+          if (modal) {
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden"; // Bloqueia scroll
+          }
+        });
+      });
 
-// Fechar modal ao clicar no X
-closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal-overlay');
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Libera scroll
-    });
-});
+      // Fechar modal ao clicar no X
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const modal = button.closest(".modal-overlay");
+          modal.classList.remove("active");
+          document.body.style.overflow = "auto"; // Libera scroll
+        });
+      });
 
-// Fechar modal ao clicar fora do conteúdo
-modals.forEach(modal => {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
-});
+      // Fechar modal ao clicar fora do conteúdo
+      modals.forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
     </script>
   </body>
 </html>
