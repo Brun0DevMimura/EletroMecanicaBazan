@@ -51,7 +51,10 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
     />
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
 
     <style>
       /* =============================================
@@ -543,60 +546,59 @@
       }
 
       /* MAPS */
-    /* CONTAINER PRINCIPAL DOS MAPAS */
-.maps-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 40px 0;
-    justify-content: center;
-}
+      /* CONTAINER PRINCIPAL DOS MAPAS */
+      .maps-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin: 40px 0;
+        justify-content: center;
+      }
 
-/* ESTILO DE CADA MAPA */
-.map-box {
-    flex: 1 1 calc(50% - 12.5px); /* 2 colunas em desktop */
-    min-width: 300px;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
+      /* ESTILO DE CADA MAPA */
+      .map-box {
+        flex: 1 1 calc(50% - 12.5px); /* 2 colunas em desktop */
+        min-width: 300px;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
 
-.map-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
+      .map-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
 
-/* TÍTULO DO MAPA */
-.map-header {
-    background: #4765E4;
-    color: white;
-    padding: 15px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+      /* TÍTULO DO MAPA */
+      .map-header {
+        background: #4765e4;
+        color: white;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
 
-/* CONTAINER DO IFRAME (PROPORÇÃO 16:9) */
-.map-embed {
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
-    position: relative;
-}
+      /* CONTAINER DO IFRAME (PROPORÇÃO 16:9) */
+      .map-embed {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 */
+        position: relative;
+      }
 
-.map-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
+      .map-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
 
       /* BOTÃO VOLTAR AO TOPO */
       .seta-up {
@@ -817,29 +819,29 @@
       }
 
       .btn-go {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 45px;
-    height: 45px;
-    background: #4765E4;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    z-index: 2;
-    font-size: 18px;
-}
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        background: #4765e4;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 2;
+        font-size: 18px;
+      }
 
-.btn-go:hover {
-    background: #3a56c5;
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
+      .btn-go:hover {
+        background: #3a56c5;
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
       /* RESPONSIVO */
 
       @media screen and (max-width: 991px) {
@@ -1029,12 +1031,12 @@
         }
       }
 
-  /* RESPONSIVO: MOBILE */
-@media (max-width: 768px) {
-    .map-box {
-        flex: 1 1 100%; /* 1 coluna em mobile */
-    }
-}
+      /* RESPONSIVO: MOBILE */
+      @media (max-width: 768px) {
+        .map-box {
+          flex: 1 1 100%; /* 1 coluna em mobile */
+        }
+      }
 
       @media screen and (max-width: 480px) {
         .hero-content h1 {
@@ -1127,10 +1129,10 @@
                   confiança e resultado real.
                 </p>
                 <a
-                href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Eletromec%C3%A2nica%20Bazan."
-                target="_blank"
-                text-decoration="none"
-                class="btn-hero"
+                  href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Eletromec%C3%A2nica%20Bazan."
+                  target="_blank"
+                  text-decoration="none"
+                  class="btn-hero"
                   >Solicite um Orçamento</a
                 >
               </div>
@@ -1217,7 +1219,9 @@
             <div class="mt-4">
               <a href="Construção.html" class="link-btn"
                 >saiba mais
-                <img src="./img/icon_seta_pdireita.svg" alt="icon_seta_pdireita"
+                <img
+                  src="./img/icon_seta_pdireita.svg"
+                  alt="icon_seta_pdireita"
               /></a>
             </div>
           </div>
@@ -1247,12 +1251,16 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('./img/img_servicos_manut_preditiv2.png') center center no-repeat;
-                     background-size: cover;
-                     "
+                        background: url('./img/img_servicos_manut_preditiv2.png')
+                          center center no-repeat;
+                        background-size: cover;
+                      "
                     >
                       <div>
-                        <img src="./img/icon_servicos_grafico_manut_preditiv.svg" alt="Manutenção Preditiva" />
+                        <img
+                          src="./img/icon_servicos_grafico_manut_preditiv.svg"
+                          alt="Manutenção Preditiva"
+                        />
                         <h3>Manutenção Preditiva</h3>
                       </div>
                     </a>
@@ -1262,7 +1270,8 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('./img/img_servicos_manut_prevent1.jpeg') center center no-repeat;
+                        background: url('./img/img_servicos_manut_prevent1.jpeg')
+                          center center no-repeat;
                         background-size: cover;
                       "
                     >
@@ -1280,10 +1289,11 @@
                       href="Construção.html"
                       class="item-destaques"
                       style="
-                        background: url('./img/img_servicos_manut_correctiv1.jpg') center center no-repeat;
+                        background: url('./img/img_servicos_manut_correctiv1.jpg')
+                          center center no-repeat;
                         background-size: cover;
-                      ">       
-
+                      "
+                    >
                       <div>
                         <img
                           src="./img/icon_servicos_porca_manut_correctiv.svg"
@@ -1300,7 +1310,7 @@
                       style="
                         background: url('./img/img_servicos_project2.jpg')
                           center center no-repeat;
-                          background-size: cover; 
+                        background-size: cover;
                       "
                     >
                       <div>
@@ -1319,7 +1329,7 @@
                       style="
                         background: url('./img/img_servic0s_servindustries2_solda.jpg')
                           center center no-repeat;
-                          background-size: cover;
+                        background-size: cover;
                       "
                     >
                       <div>
@@ -1349,7 +1359,7 @@
     </div>
 
     <!-- DEPOIMENTOS -->
-    <div class="session-depoimentos">
+    <!-- <div class="session-depoimentos">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -1444,7 +1454,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- FOOTER -->
     <footer>
@@ -1452,14 +1462,15 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6 mb-5 mb-lg-0">
-              <b style="color: var(--primary-color)">Unidade I:</b><br>
+              <b style="color: var(--primary-color)">Unidade I:</b><br />
               <span
-                >Estrada Municipal, 498 - Recreio Rio Bonito<br />Suzano/SP -
+                >Estrada Municipal, 271 - Recreio Rio Bonito<br />Suzano/SP -
                 08635-450</span
-              ><br>
-               <b style="color: var(--primary-color)">Unidade II:</b><br>
+              ><br />
+              
+              <b style="color: var(--primary-color)">Unidade II:</b><br />
               <span
-                >Rua Diário de Pernambuco, s/n - Garapu<br />Cabo de Santo
+                >Rua Diário de Pernambuco, 84 - Garapu<br />Cabo de Santo
                 Agostinho/PE - 54518-285</span
               >
               <div class="my-3">
@@ -1468,15 +1479,10 @@
                 >
                 <span class="d-block"
                   ><i class="fa fa-envelope"></i>
-                  <a href="mailto:carol@eletromecanicabazan.com.br">
-                    carol@eletromecanicabazan.com.br
-                </a><br>
-                <i class="fa fa-envelope"></i>
-                  <a href="mailto:talita@eletromecanicabazan.com.br">
-                    talita@eletromecanicabazan.com.br
-                </a>
-                </span
-                >
+                  <a href="mailto:bazan@eletromecanicabazan.com.br">
+                    bazan@eletromecanicabazan.com.br </a
+                  ><br />
+                </span>
               </div>
               <div class="redes">
                 <a
@@ -1491,7 +1497,9 @@
                 ></a>
               </div>
               <div class="mt-3" style="color: var(--light-color)">
-                <b style="color: var(--primary-color)">Horário de Funcionamento</b><br />
+                <b style="color: var(--primary-color)"
+                  >Horário de Funcionamento</b
+                ><br />
                 Segunda a Sexta – 7h00 às 17h00
               </div>
             </div>
@@ -1500,68 +1508,73 @@
                 <li class="menu-item current_page_item">
                   <a href="index.html">Início</a>
                 </li>
-             
+
                 <li class="menu-item">
                   <a href="Construção.html">Nossos Serviços</a>
                 </li>
                 <li class="menu-item">
                   <a href="Construção.html">Portfólio</a>
                 </li>
-             
               </ul>
             </div>
             <div class="col-12 col-lg-3 text-center text-lg-right">
-              <a href="Construção.html" class="link-btn"
-                > <b style="color: var(--primary-color)">Mande a sua ideia pra gente </b>
+              <a href="Construção.html" class="link-btn">
+                <b style="color: var(--primary-color)"
+                  >Mande a sua ideia pra gente
+                </b>
                 <img src="./img/icon_voltar_topo.svg" alt="Seta"
               /></a>
             </div>
           </div>
         </div>
       </div>
-     <div class="maps-container">
-    <!-- MAPA 1: SUZANO/SP -->
-    <div class="map-box">
-        <div class="map-header">Suzano/SP - Matriz</div>
-        <div class="map-embed">
+      <div class="maps-container">
+        <!-- MAPA 1: SUZANO/SP -->
+        <div class="map-box">
+          <div class="map-header">Suzano/SP - Matriz</div>
+          <div class="map-embed">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.238836429123!2d-46.32944119999999!3d-23.667415399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce738ac836242f%3A0x7015a5e695b8807!2sEletromec%C3%A2nica%20Bazan!5e0!3m2!1spt-BR!2sbr!4v1757369372653!5m2!1spt-BR!2sbr"
-                allowfullscreen
-                loading="lazy"
-                title="Localização da Matriz em Suzano/SP"
-                aria-label="Mapa da Matriz da Eletromecânica Bazan em Suzano, São Paulo"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.238836429123!2d-46.32944119999999!3d-23.667415399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce738ac836242f%3A0x7015a5e695b8807!2sEletromec%C3%A2nica%20Bazan!5e0!3m2!1spt-BR!2sbr!4v1757369372653!5m2!1spt-BR!2sbr"
+              allowfullscreen
+              loading="lazy"
+              title="Localização da Matriz em Suzano/SP"
+              aria-label="Mapa da Matriz da Eletromecânica Bazan em Suzano, São Paulo"
             ></iframe>
             <!-- ÍCONE "IR" SOBREPOSTO NO TOPO DIREITO -->
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Municipal,+271+-+Recreio+Rio+Bonito,+Suzano+-+SP,+08635-450" 
-               target="_blank" 
-               class="btn-go top-right"
-               title="Traçar rota para Suzano/SP">
-                <i class="fas fa-directions"></i>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Municipal,+271+-+Recreio+Rio+Bonito,+Suzano+-+SP,+08635-450"
+              target="_blank"
+              class="btn-go top-right"
+              title="Traçar rota para Suzano/SP"
+            >
+              <i class="fas fa-directions"></i>
             </a>
+          </div>
         </div>
-    </div>
 
-    <!-- MAPA 2: CABO DE SANTO AGOSTINHO/PE -->
-    <div class="map-box">
-        <div class="map-header">Cabo de Santo Agostinho/PE - Filial</div>
-        <div class="map-embed">
+        <!-- MAPA 2: CABO DE SANTO AGOSTINHO/PE -->
+        <div class="map-box">
+          <div class="map-header">Cabo de Santo Agostinho/PE - Filial</div>
+          <div class="map-embed">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0332413318793!2d-35.02500828891527!3d-8.299490683456364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefe97e529239%3A0x696a599e328090af!2sR.%20Di%C3%A1rio%20de%20Pernambuco%2C%2083%20-%20Garapu%2C%20Cabo%20de%20Santo%20Agostinho%20-%20PE%2C%2054518-285!5e0!3m2!1spt-BR!2sbr!4v1757369312118!5m2!1spt-BR!2sbr"
-                allowfullscreen
-                loading="lazy"
-                title="Localização da Filial em Cabo de Santo Agostinho/PE"
-                aria-label="Mapa da Filial da Eletromecânica Bazan em Cabo de Santo Agostinho, Pernambuco"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0332413318793!2d-35.02500828891527!3d-8.299490683456364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefe97e529239%3A0x696a599e328090af!2sR.%20Di%C3%A1rio%20de%20Pernambuco%2C%2083%20-%20Garapu%2C%20Cabo%20de%20Santo%20Agostinho%20-%20PE%2C%2054518-285!5e0!3m2!1spt-BR!2sbr!4v1757369312118!5m2!1spt-BR!2sbr"
+              allowfullscreen
+              loading="lazy"
+              title="Localização da Filial em Cabo de Santo Agostinho/PE"
+              aria-label="Mapa da Filial da Eletromecânica Bazan em Cabo de Santo Agostinho, Pernambuco"
             ></iframe>
-             <!-- ÍCONE "IR" SOBREPOSTO NO TOPO DIREITO -->
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Di%C3%A1rio+de+Pernambuco,+s%2Fn+-+Garapu,+Cabo+de+Santo+Agostinho+-+PE,+54518-285" 
-               target="_blank" 
-               class="btn-go top-right"
-               title="Traçar rota para Cabo de Santo Agostinho/PE">
-                <i class="fas fa-directions"></i>
+            <!-- ÍCONE "IR" SOBREPOSTO NO TOPO DIREITO -->
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Rua+Di%C3%A1rio+de+Pernambuco,+s%2Fn+-+Garapu,+Cabo+de+Santo+Agostinho+-+PE,+54518-285"
+              target="_blank"
+              class="btn-go top-right"
+              title="Traçar rota para Cabo de Santo Agostinho/PE"
+            >
+              <i class="fas fa-directions"></i>
             </a>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
       <div class="copy">
         <div class="container">
           <div class="row">
@@ -1570,9 +1583,13 @@
               reservados
             </div>
             <div class="col-12 col-lg-6 text-center text-lg-right mt-2 mt-lg-0">
-              <a href="https://www.dotincbr.com.br" target="_blank">desenvolvido por DotIncBR <i class="fi fi-bs-mug-hot"  style="color: var(--primary-color)"></i>
+              <a href="https://www.dotincbr.com.br" target="_blank"
+                >desenvolvido por DotIncBR
+                <i
+                  class="fi fi-bs-mug-hot"
+                  style="color: var(--primary-color)"
+                ></i>
               </a>
-              
             </div>
           </div>
         </div>
