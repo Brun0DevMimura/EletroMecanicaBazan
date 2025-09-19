@@ -74,7 +74,10 @@
         padding: 0;
         box-sizing: border-box;
       }
-
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
       body {
         font-family: "Poppins", sans-serif;
         color: var(--dark-color);
@@ -207,7 +210,7 @@
         .hero-services {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./img/img_servicos_herocontent2.png') center center no-repeat;
             background-size: cover;
-            height: 50vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -231,6 +234,28 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
+         .btn-hero {
+        background: var(--primary-color);
+        text-decoration: none;
+        color: #f8fafc;
+        border-radius: 10px;
+        margin-top: 46px;
+        padding: 10px 18px;
+        display: inline-block;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        border: 2px solid var(--primary-color);
+      }
+
+      .btn-hero:hover {
+        background: transparent;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
         /* SERVICES GRID */
         .section-title {
             text-align: center;
@@ -245,7 +270,7 @@
             content: '';
             position: absolute;
             bottom: -10px;
-            left: 50%;
+            left: 12%;
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
@@ -444,11 +469,13 @@
             background: white;
             width: 90%;
             max-width: 600px;
+            max-height: 80vh;
             border-radius: 12px;
             position: relative;
             transform: translateY(-30px);
             opacity: 0;
             transition: all 0.4s ease;
+            overflow-y: auto;
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
 
@@ -465,6 +492,7 @@
     text-align: center;
     overflow: hidden;
     height: 200px;
+        min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -505,7 +533,7 @@
 }
 
 .modal-header h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
     color: white;
@@ -517,7 +545,7 @@
         }
 
         .modal-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #555;
             line-height: 1.8;
             margin: 0 0 30px 0;
@@ -855,10 +883,10 @@
 
       @media screen and (max-width: 768px) {
    .hero-services h1 {
-                font-size: 2.2rem;
+                font-size: 4.2rem;
             }
             .hero-services p {
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
             .section-title {
                 font-size: 1.8rem;
@@ -962,13 +990,21 @@
     <!-- HERO -->
     <section class="hero-services">
         <div class="container">
-            <h1>Nossos Serviços</h1>
+            <h1>Nossos <b style="color: var(--primary-color)">Serviços</b></h1>
             <p>Soluções eletromecânicas personalizadas para manter sua indústria em movimento — com segurança, eficiência e excelência técnica.</p>
-        </div>
+        <a
+                  href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Eletromec%C3%A2nica%20Bazan."
+                  target="_blank"
+                  class="btn-hero"
+                  >Solicite um Orçamento</a
+                >
+       
+          </div>
     </section>
 
     <!-- SERVIÇOS -->
     <main class="container">
+      <b style="color: var(--primary-color)">PORTFÓLIO</b><br />
         <h2 class="section-title">O que oferecemos</h2>
         <div class="services-grid">
             <!-- SERVIÇO 1: MANUTENÇÃO PREDITIVA -->
