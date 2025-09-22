@@ -59,14 +59,17 @@
 
     <style>
       /* =============================================
-           ELETROMECÂNICA BAZAN - CSS COMPLETO
-           ============================================= */
+                 ELETROMECÂNICA BAZAN - CSS COMPLETO
+                 ============================================= */
       :root {
         --primary-color: #4765e4;
         --dark-color: #333;
         --light-color: #f8f9fa;
         --border-color: #ddd;
         --whatsapp-color: #25d366;
+        --tertiary-color: #007aff;
+
+        
       }
 
       * {
@@ -74,16 +77,17 @@
         padding: 0;
         box-sizing: border-box;
       }
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
       body {
         font-family: "Poppins", sans-serif;
         color: var(--dark-color);
         line-height: 1.6;
         overflow-x: hidden;
-        background-color: #fff;
+        background-color:var(--light-color);
       }
 
       a {
@@ -112,10 +116,10 @@ html, body {
 
       .container {
         width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 1280px;
+        margin: auto;
       }
-      
+
       /* UTILS */
       .max-img img {
         max-width: 100%;
@@ -205,389 +209,628 @@ html, body {
         padding: 5px 15px;
         transition: all 0.3s;
       }
-    /*CONTEUDO*/
-     /* HERO SECTION */
-        .hero-services {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./img/img_servicos_herocontent2.png') center center no-repeat;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            margin-bottom: 60px;
-            margin-top:7rem;
-        }
-
-        .hero-services h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero-services p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-         .btn-hero {
-        background: var(--primary-color);
-        text-decoration: none;
-        color: #f8fafc;
-        border-radius: 10px;
-        margin-top: 46px;
-        padding: 10px 18px;
-        display: inline-block;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s;
-        border: 2px solid var(--primary-color);
-      }
-
-      .btn-hero:hover {
-        background: transparent;
-        color: var(--primary-color);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-        /* SERVICES GRID */
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin: 0 0 40px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 12%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--primary-color);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-
-        /* CARD DE SERVIÇO COM IMAGEM DE FUNDO */
-        .service-card {
-            height: 380px;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .service-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        .service-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(71,101,228,0.2) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: white;
-            color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 28px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .service-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-title {
-            color: var(--primary-color);
-        }
-
-        /* ANIMAÇÃO FADE IN UP */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in-up.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-/* CARD DE SERVIÇO COM VÍDEO DE FUNDO */
-        .service-card {
-            height: 380px;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .service-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        .service-video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .service-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none;
-        }
-
-        .service-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(71,101,228,0.2) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: white;
-            color: var(--primary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 28px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .service-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover .service-title {
-            color: var(--primary-color);
-        }
-
-        /* MODAL DE SERVIÇO */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: white;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            border-radius: 12px;
-            position: relative;
-            transform: translateY(-30px);
-            opacity: 0;
-            transition: all 0.4s ease;
-            overflow-y: auto;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-      /* ESTILO DO CABEÇALHO DO MODAL COM VÍDEO */
-.modal-header {
-    position: relative;
-    padding: 40px 20px;
-    border-radius: 12px 12px 0 0;
-    text-align: center;
-    overflow: hidden;
-    height: 200px;
-        min-height: 150px;
+      /*CONTEUDO*/
+      /* HERO */
+      .hero-portfolio {
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/img_servicos_herocontent.png") center center no-repeat;
+    background-size: cover; /* ✅ REMOVA AS ASPAS */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 100px;
+      }
+
+      .hero-portfolio h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        background: var(--primary-color);
+        /* linear-gradient(90deg, var(--light-color), var(--primary-color)); */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-portfolio p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        color: #aaa;
+      }
+
+      /* TIMELINE SECTION */
+      .timeline-section {
+        position: relative;
+        padding: 100px 0;
+      }
+
+      .timeline-section::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        right: 50%;
+        width: 2px;
+        background: var(--primary-color);
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+
+      .timeline-item {
+        position: relative;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: -100px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .timeline-item.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .timeline-item:nth-child(odd) {
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 0;
+    margin-left: -8%;
+      }
+
+      .timeline-item:nth-child(even) {
+        text-align: left;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+          margin-right: 0%;
+    margin-left: 52%;
+      }
+
+      .timeline-content {
+        background: #1a1a1a;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        position: relative;
+       max-width: 56%;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: var(--primary-color);
+      }
+
+      .timeline-content h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .timeline-content .meta {
+        font-size: 0.9rem;
+        color: #aaa;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .timeline-content p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        color: #ccc;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        background: var(--primary-color);
+        border:1px solid var(--light-color);
+        border-radius: 50%;
+        z-index: 3;
+        transform: translateX(-50%);
+      }
+
+   /* REMOVER POSICIONAMENTO ESPECÍFICO PARA ÍMPAR/PAR */
+.timeline-item:nth-child(odd) .timeline-dot,
+.timeline-item:nth-child(even) .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.modal-header-video {
-    position: absolute;
+      /* CLIENTS SECTION */
+      .clients-section {
+        padding: 100px 0;
+        background: #151515;
+        text-align: center;
+      }
+
+      .clients-section h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 60px;
+        background: linear-gradient(90deg, var(--primary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .clients-intro {
+        max-width: 800px;
+        margin: 0 auto 60px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #aaa;
+      }
+
+      /* SWIPER CLIENTS */
+      .clients-slider {
+        width: 100%;
+        padding: 0 40px;
+        margin:20px;
+      }
+
+      .swiper-slide {
+        height: auto;
+      }
+
+      .client-card {
+        background: #1a1a1a;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 40px;
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 98%;
+      }
+
+      .client-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border-color: var(--primary-color);
+      }
+
+      .client-logo {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+      }
+
+      .client-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #ccc;
+        flex: 1;
+      }
+
+/* ESTILO PARA IMAGEM NO CARD DA TIMELINE */
+.timeline-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ESTILO PARA IMAGEM NO CARD DO CLIENTE */
+.client-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* MODAL DE PROJETO/CLIENTE */
+.modal-overlay {
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-full {
+    background: white;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    border-radius: 12px;
+    position: relative;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay.active .modal-content-full {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-header-full {
+    position: relative;
+    height: 300px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.modal-header-full img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    pointer-events: none;
-    z-index: 0;
 }
 
-.modal-header-overlay {
+.modal-header-overlay-full {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 1;
+    background: rgba(0,0,0,0.4);
 }
 
-.modal-header-content {
-    position: relative;
-    z-index: 2;
+.modal-header-content-full {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
     color: white;
 }
 
-.modal-header i {
-    font-size: 36px;
-    margin-bottom: 15px;
-    color: white;
-}
-
-.modal-header h3 {
-    font-size: 1.5rem;
+.modal-header-content-full h3 {
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-        .modal-body {
-            padding: 30px;
-        }
+.modal-body-full {
+    padding: 30px;
+}
 
-        .modal-text {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.8;
-            margin: 0 0 30px 0;
-        }
+.modal-body-full .meta {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+    font-style: italic;
+}
 
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #aaa;
-            transition: color 0.3s;
-        }
+.modal-body-full p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
 
-        .close-modal:hover {
-            color: var(--primary-color);
-        }
+.close-modal-full {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
 
-        .btn-cta {
-            background: var(--primary-color);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: 2px solid var(--primary-color);
-        }
+.btn-cta-full {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
 
-        .btn-cta:hover {
-            background: transparent;
-            color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-  
+.btn-cta-full:hover {
+    background: transparent;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+      /* SWIPER PAGINATION */
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #555;
+        opacity: 1;
+        margin: 0 6px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--primary-color);
+        width: 20px;
+        border-radius: 6px;
+      }
+
+      /* ANIMAÇÃO FADE IN UP */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .fade-in-up.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* CARD DE SERVIÇO COM VÍDEO DE FUNDO */
+      .service-card {
+        height: 380px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .service-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .service-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+
+      .service-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(71, 101, 228, 0.2) 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .service-icon {
+        width: 70px;
+        height: 70px;
+        background: white;
+        color: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        background: var(--primary-color);
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .service-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover .service-title {
+        color: var(--primary-color);
+      }
+
+      /* MODAL DE SERVIÇO */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-content {
+        background: white;
+        width: 90%;
+        max-width: 600px;
+        max-height: 80vh;
+        border-radius: 12px;
+        position: relative;
+        transform: translateY(-30px);
+        opacity: 0;
+        transition: all 0.4s ease;
+        overflow-y: auto;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-overlay.active .modal-content {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* ESTILO DO CABEÇALHO DO MODAL COM VÍDEO */
+      .modal-header {
+        position: relative;
+        padding: 40px 20px;
+        border-radius: 12px 12px 0 0;
+        text-align: center;
+        overflow: hidden;
+        height: 200px;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-header-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .modal-header-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+
+      .modal-header-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+      }
+
+      .modal-header i {
+        font-size: 36px;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .modal-header h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-body {
+        padding: 30px;
+      }
+
+      .modal-text {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.8;
+        margin: 0 0 30px 0;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #aaa;
+        transition: color 0.3s;
+      }
+
+      .close-modal:hover {
+        color: var(--primary-color);
+      }
+
+      .btn-cta {
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 35px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary-color);
+      }
+
+      .btn-cta:hover {
+        background: transparent;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
       /* FOOTER */
       footer {
         background: #111;
@@ -661,7 +904,6 @@ html, body {
         font-weight: 500;
       }
 
-      
       /* BOTÃO VOLTAR AO TOPO */
       .seta-up {
         display: none;
@@ -734,9 +976,7 @@ html, body {
         transform: translateX(3px);
       }
 
-   
-
-    /* MAPS */
+      /* MAPS */
       .maps-container {
         display: flex;
         flex-wrap: wrap;
@@ -786,7 +1026,6 @@ html, body {
         height: 100%;
         border: none;
       }
-
 
       /* ESTILO DO BOTÃO CIRCULAR DE TRAÇAR ROTA */
 
@@ -839,64 +1078,29 @@ html, body {
       }
 
       /* RESPONSIVO */
-      @media screen and (max-width: 991px) {
-        .nav {
-          padding: 20px 0 0 0;
-          flex-direction: column;
-          display: none;
+      
+      @media screen and (max-width: 992px) {
+        .hero-portfolio {
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url(./img/img_servicos_herocontent2.png) center bottom no-repeat;
+          margin-bottom: -5px;
+          background-size: "cover";
         }
-        .nav .menu-item {
-          display: block;
-          width: 100%;
+        .hero-services h1 {
+          font-size: 4.2rem;
         }
-        .nav .menu-item a {
-          display: block;
-          width: 100%;
-          padding: 15px 0;
-          font-size: 16px;
-          text-align: center;
-          border-top: solid 0.3px var(--border-color);
-          font-weight: 400;
+        .hero-services p {
+          font-size: 1.5rem;
         }
-        .content-nav.active .nav {
-          display: flex;
-          flex-direction: column;
-          padding: 0;
+        .section-title {
+          font-size: 1.8rem;
         }
-        .header {
-          padding: 20px;
+        .service-card {
+          height: 320px;
         }
-       
-            
-        .slogan {
-          font-size: 14px;
-          line-height: 16px;
-          display: block;
-          margin: 5px 0 0 0;
+        .service-title {
+          font-size: 1.2rem;
         }
-        .nav-footer .menu-item a,
-        .session-footer span {
-          font-size: 16px !important;
-        }
-      }
-
-
-      @media screen and (max-width: 768px) {
-   .hero-services h1 {
-                font-size: 4.2rem;
-            }
-            .hero-services p {
-                font-size: 1.5rem;
-            }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            .service-card {
-                height: 320px;
-            }
-            .service-title {
-                font-size: 1.2rem;
-            }
 
         .content-nav.active .nav .menu-item a {
           display: block;
@@ -908,19 +1112,334 @@ html, body {
           font-weight: 500;
           color: #333;
         }
-      
+        .timeline-content{
+          max-width: 800px;
+        }
+
+         .timeline-section::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          bottom: 0;
+          left: 5%;
+          width: 2px;
+          background: var(--primary-color);
+          transform: translateX(-50%);
+        }
+
+        .timeline-dot {
+          position: absolute;
+          top: 20px;
+          width: 20px;
+          height: 20px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+         left: -15px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+          left: -15px;
+        }
+
+        .timeline-item:nth-child(odd) {
+          text-align: center;
+        }
+        .timeline-item:nth-child(even) {
+          text-align: center;
+        }
+
+        .timeline-item .timeline-content {
+          margin-right: 0%;
+        }
+
+        .timeline-item:nth-child(even) {
+          text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+              margin-left: 0px;
+   
+        }
+
+        .timeline-item:nth-child(odd) {
+          text-align: left;
+          margin-bottom: 40px;
+    }
+        
+
+        .timeline-item:nth-child(odd) .timeline-content {
+          margin-left: 0px;
+            margin-right: -20px;
+         
+        }
+
+        .timeline-item:nth-child(even) {
+          text-align: left;
+          margin-bottom: 40px;
+    }
+        
+
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: 0px;
+          margin-right: -20px;
+        }
+
+        .timeline-content h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: var(--primary-color);
+        }
+        .timeline-content p {
+        
+          margin-bottom: 0px;
+       
+        }
+.cliente-card{
+  max-width: 98%;
+  
+}
         .map-box {
           flex: 1 1 100%;
         }
-        
       }
 
-        @media (max-width: 480px) {
-            .hero-services h1 {
-                font-size: 1.8rem;
-            }
+      @media screen and (max-width: 768px) {
+         .hero-portfolio {
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url(./img/img_servicos_herocontent2.png) center bottom no-repeat;
+          margin-bottom: -5px;
+        }
+        .hero-services h1 {
+          font-size: 4.2rem;
+        }
+        .hero-services p {
+          font-size: 1.5rem;
+        }
+        .section-title {
+          font-size: 1.8rem;
+        }
+        .service-card {
+          height: 320px;
+        }
+        .service-title {
+          font-size: 1.2rem;
         }
 
+        .content-nav.active .nav .menu-item a {
+          display: block;
+          width: 100%;
+          padding: 15px 20px;
+          font-size: 16px;
+          text-align: center;
+          border-top: solid 1px #eee;
+          font-weight: 500;
+          color: #333;
+        }
+        .timeline-content{
+          max-width: 800px;
+        }
+
+         .timeline-section::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          bottom: 0;
+          left: 5%;
+          width: 2px;
+          background: var(--primary-color);
+          transform: translateX(-50%);
+        }
+
+        .timeline-dot {
+          position: absolute;
+          top: 20px;
+          width: 20px;
+          height: 20px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+         left: -15px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+          left: -15px;
+        }
+
+        .timeline-item:nth-child(odd) {
+          text-align: center;
+        }
+        .timeline-item:nth-child(even) {
+          text-align: center;
+        }
+
+        .timeline-item .timeline-content {
+          margin-right: 0%;
+        }
+
+        .timeline-item:nth-child(even) {
+          text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+              margin-left: 0px;
+   
+        }
+
+        .timeline-item:nth-child(odd) {
+          text-align: left;
+          margin-bottom: 40px;
+    }
+        
+
+        .timeline-item:nth-child(odd) .timeline-content {
+          margin-left: 0px;
+            margin-right: -20px;
+         
+        }
+
+        .timeline-item:nth-child(even) {
+          text-align: left;
+          margin-bottom: 40px;
+    }
+        
+
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: 0px;
+          margin-right: -20px;
+        }
+
+        .timeline-content h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: var(--primary-color);
+        }
+        .timeline-content p {
+        
+          margin-bottom: 0px;
+       
+        }
+.cliente-card{
+  max-width: 98%;
+}
+        .map-box {
+          flex: 1 1 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-portfolio {
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url(./img/img_servicos_herocontent2.png) center bottom no-repeat;
+          margin-bottom: -5px;
+        }
+        .hero-portfolio h1 {
+          font-size: 3.5rem;
+          line-height: 6rem;
+        }
+        .hero-portfolio p {
+          font-size: 1.5rem;
+          padding: 5px 50px 5px 50px;
+        }
+
+        .hero-services h1 {
+          font-size: 1.8rem;
+        }
+        .timeline-section::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          bottom: 0;
+          left: 5%;
+          width: 2px;
+          background: var(--primary-color);
+          transform: translateX(-50%);
+        }
+
+        .timeline-dot {
+          position: absolute;
+          top: 20px;
+          width: 20px;
+          height: 20px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+          left: -6%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+          left: -6%;
+        }
+
+        .timeline-item:nth-child(odd) {
+          text-align: center;
+        }
+        .timeline-item:nth-child(even) {
+          text-align: center;
+        }
+
+        .timeline-item .timeline-content {
+          margin-right: 0%;
+        }
+
+        .timeline-item:nth-child(even) {
+          text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+              margin-left: 0px;
+    margin-right: -20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+          text-align: left;
+          margin-bottom: 40px;
+    }
+        
+
+        .timeline-item:nth-child(odd) .timeline-content {
+          margin-left: 0px;
+          margin-right: -20px;
+        }
+
+        .timeline-item:nth-child(even) {
+          text-align: left;
+          margin-bottom: 40px;
+    }
+        
+
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: 0px;
+          margin-right: -20px;
+        }
+
+        .timeline-content h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: var(--primary-color);
+        }
+        .timeline-content p {
+        
+          margin-bottom: 0px;
+       
+        }
+
+        .cliente-card{
+  max-width: 98%;
+}
+      }
     </style>
   </head>
 
@@ -984,10 +1503,120 @@ html, body {
         </div>
       </div>
     </header>
-<!-- CONTEUDO DA PAGINA AQUI -->
-   
+    <!-- CONTEUDO DA PAGINA AQUI -->
 
-     
+    <!-- HERO -->
+    <section class="hero-portfolio">
+      <div>
+        <h1>Projetos Realizados</h1>
+        <p>
+          Soluções eletromecânicas que transformaram desafios em resultados
+          reais para indústrias de grande porte.
+        </p>
+      </div>
+    </section>
+
+<!-- TIMELINE DE PROJETOS -->
+<section class="timeline-section">
+    <div class="container">
+        <!-- PROJETO 1 -->
+        <div class="timeline-item" data-modal="modal-projeto1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content"> 
+                <h3>Grupo Bimbo</h3>
+                <img src="./img/img_portifolio_RetrofitCompleto.png" alt="Retrofit Completo - Grupo Bimbo" class="timeline-img">
+               
+                <div class="meta">Jaboatão dos Guararapes - PE | 2024</div>
+                <p>
+                    <strong>Projeto: Cooler – Retrofit Completo</strong><br>
+                    Realizamos um retrofit completo no equipamento, incluindo a substituição das guias em inox tipo “U”...
+                </p>
+            </div>
+        </div>
+
+        <!-- PROJETO 2 -->
+        <div class="timeline-item" data-modal="modal-projeto2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Grupo Bimbo</h3>
+                <img src="./img/img_servicos_manut_correctiv1.jpg" alt="Manutenção Sistema de Tração - Grupo Bimbo" class="timeline-img">
+                <div class="meta">Brasília - DF | 2024</div>
+                <p>
+                    <strong>Projeto: Manutenção Completa do Sistema de Tração</strong><br>
+                    Serviço executado com foco em desempenho e confiabilidade operacional...
+                </p>
+            </div>
+        </div>
+
+        <!-- PROJETO 3 -->
+        <div class="timeline-item" data-modal="modal-projeto3">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Panco</h3>
+                <img src="./img/img_servicos_manut_prevent1.jpeg" alt="Armazenador de Formas - Panco" class="timeline-img">
+                <div class="meta">Guararema - SP | 2024</div>
+                <p>
+                    <strong>Projeto: Limpeza, lubrificação e revisão do Armazenador de Formas</strong><br>
+                    Realizamos a limpeza, lubrificação e revisão completa do Armazenador de Formas...
+                </p>
+            </div>
+        </div>
+
+        <!-- PROJETO 4 -->
+        <div class="timeline-item" data-modal="modal-projeto4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>LPG Foods</h3>
+                <img src="./img/img_servicos_project2.jpg" alt="Limpadora de Formas - LPG Foods" class="timeline-img">
+                <div class="meta">São Paulo - SP | 2022</div>
+                <p>
+                    <strong>Projeto: Limpadora de Formas</strong><br>
+                    Projetada para garantir eficiência e higiene no processo produtivo...
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- SWIPER CLIENTS -->
+<div class="clients-slider">
+    <div class="swiper" id="sliderClients">
+        <div class="swiper-wrapper">
+            <!-- CLIENTE 1 -->
+            <div class="swiper-slide" data-modal="modal-cliente1">
+                <div class="client-card">
+                    <img src="./img/logo_grupo_bimbo.png" alt="Logo Grupo Bimbo" class="client-logo-img">
+                    <h3 class="client-logo">Grupo Bimbo</h3>
+                    <p>
+                        Projetos como a máquina de estampar pães e a limpadora de formas demonstram nossa capacidade...
+                    </p>
+                </div>
+            </div>
+            <!-- CLIENTE 2 -->
+            <div class="swiper-slide" data-modal="modal-cliente2">
+                <div class="client-card">
+                    <img src="./img/logo_panco.png" alt="Logo Panco" class="client-logo-img">
+                    <h3 class="client-logo">Panco</h3>
+                    <p>
+                        Executamos serviços que incluíram mão de obra especializada, projetos de escadas e plataformas...
+                    </p>
+                </div>
+            </div>
+            <!-- CLIENTE 3 -->
+            <div class="swiper-slide" data-modal="modal-cliente3">
+                <div class="client-card">
+                    <img src="./img/logo_lpg_foods.png" alt="Logo LPG Foods" class="client-logo-img">
+                    <h3 class="client-logo">LPG Foods</h3>
+                    <p>
+                        Parceria estratégica baseada em confiança e resultados. Nossos serviços de manutenção preditiva...
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination" id="paginationClients"></div>
+    </div>
+</div>
+
     <!-- BOTÃO VOLTAR AO TOPO -->
     <span class="seta-up" id="backToTop"><i class="fa fa-angle-up"></i></span>
     <!-- FOOTER -->
@@ -1024,7 +1653,7 @@ html, body {
                   ><i class="fab fa-instagram"></i
                 ></a>
                 <a
-                  href="https://www.linkedin.com/company/eletromecanicabazan"
+                  href="https://www.linkedin.com/company/eletrom%C3%AAcanica-bazan/"
                   target="_blank"
                   ><i class="fab fa-linkedin"></i
                 ></a>
@@ -1134,6 +1763,168 @@ html, body {
       </div>
     </footer>
 
+    <!-- MODAL PROJETO 1 -->
+<div class="modal-overlay" id="modal-projeto1">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_portifolio_RetrofitCompleto.png" alt="Retrofit Completo - Grupo Bimbo">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>Grupo Bimbo - Retrofit Completo</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <div class="meta">Jaboatão dos Guararapes - PE | 2024</div>
+            <p>
+                <strong>Projeto: Cooler – Retrofit Completo</strong><br>
+                Realizamos um retrofit completo no equipamento, incluindo a substituição das guias em inox tipo “U” de apoio da esteira no tambor, a preparação e instalação de peças de apoio em UHMW, a instalação de guia central para alinhamento da esteira, além da fabricação e instalação do sistema take-up com contrapeso duplo e do sistema hold-down. Todo o processo foi executado em conformidade com o projeto desenvolvido pela Intralox, empresa reconhecida mundialmente como referência em soluções para esteiras transportadoras, que acompanhou de perto cada etapa do serviço. Para finalizar, o equipamento recebeu pintura completa, assegurando maior durabilidade, eficiência e confiabilidade operacional.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20projeto%20de%20Retrofit%20Completo%20para%20o%20Grupo%20Bimbo." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PROJETO 2 -->
+<div class="modal-overlay" id="modal-projeto2">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_servicos_manut_correctiv1.jpg" alt="Manutenção Sistema de Tração - Grupo Bimbo">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>Grupo Bimbo - Manutenção Sistema de Tração</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <div class="meta">Brasília - DF | 2024</div>
+            <p>
+                <strong>Projeto: Manutenção Completa do Sistema de Tração</strong><br>
+                Serviço executado com foco em desempenho e confiabilidade operacional. As intervenções incluíram a substituição integral das curvas internas e externas, troca da corrente de arraste e revisão completa do conjunto de tração, com substituição dos rolamentos. Além disso, foi realizada a revisão e correção dos grids, restabelecendo as condições ideais de funcionamento e prolongando a vida útil do equipamento.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20projeto%20de%20Manutenção%20do%20Sistema%20de%20Tração%20para%20o%20Grupo%20Bimbo." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PROJETO 3 -->
+<div class="modal-overlay" id="modal-projeto3">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_servicos_manut_prevent1.jpeg" alt="Armazenador de Formas - Panco">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>Panco - Armazenador de Formas</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <div class="meta">Guararema - SP | 2024</div>
+            <p>
+                <strong>Projeto: Limpeza, lubrificação e revisão do Armazenador de Formas</strong><br>
+                Realizamos a limpeza, lubrificação e revisão completa do Armazenador de Formas, assegurando não apenas a higiene e a segurança do ambiente, mas também a plena continuidade operacional dos equipamentos. A execução foi conduzida com procedimentos criteriosos, utilizando ferramentas e produtos adequados, o que resultou em máxima eficiência e confiabilidade. Esse trabalho reforça o compromisso da Eletromecânica Bazan em entregar soluções de alta qualidade, com foco em segurança, desempenho e valor agregado aos processos de nossos clientes.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20projeto%20de%20Limpeza%20e%20Revisão%20do%20Armazenador%20de%20Formas%20para%20a%20Panco." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PROJETO 4 -->
+<div class="modal-overlay" id="modal-projeto4">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_servicos_project2.jpg" alt="Limpadora de Formas - LPG Foods">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>LPG Foods - Limpadora de Formas</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <div class="meta">São Paulo - SP | 2022</div>
+            <p>
+                <strong>Projeto: Limpadora de Formas</strong><br>
+                Projetada para garantir eficiência e higiene no processo produtivo, esta máquina realiza a limpeza das formas no sentido vertical, utilizando escovas rotativas atóxicas que asseguram a remoção completa de resíduos sem comprometer a integridade do material. O resíduo do produto é direcionado para um compartimento exclusivo de descarte, garantindo organização e segurança no ambiente de trabalho.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20projeto%20da%20Limpadora%20de%20Formas%20para%20a%20LPG%20Foods." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL CLIENTE 1 -->
+<div class="modal-overlay" id="modal-cliente1">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_portifolio_RetrofitCompleto.png" alt="Grupo Bimbo">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>Grupo Bimbo</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <p>
+                Projetos como a máquina de estampar pães e a limpadora de formas demonstram nossa capacidade de desenvolver soluções sob medida. Com a nossa experiência, apoiamos a empresa LPG por meio de serviços de manutenção industrial e criação de peças personalizadas, agregando valor à produção e garantindo mais desempenho.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20para%20o%20Grupo%20Bimbo." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL CLIENTE 2 -->
+<div class="modal-overlay" id="modal-cliente2">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_servicos_manut_prevent1.jpeg" alt="Panco">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>Panco</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <p>
+                Executamos serviços que incluíram mão de obra especializada, projetos de escadas e plataformas, fabricação de suportes, engrenagens, chapas de explosão e buchas armazenadoras, além da instalação completa dos componentes. Com essa atuação, entregamos mais otimização aos processos do cliente, garantindo eficiência e qualidade em cada etapa.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20para%20a%20Panco." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL CLIENTE 3 -->
+<div class="modal-overlay" id="modal-cliente3">
+    <div class="modal-content-full">
+        <div class="modal-header-full">
+            <img src="./img/img_servicos_project2.jpg" alt="LPG Foods">
+            <div class="modal-header-overlay-full"></div>
+            <div class="modal-header-content-full">
+                <h3>LPG Foods</h3>
+            </div>
+            <button class="close-modal-full">&times;</button>
+        </div>
+        <div class="modal-body-full">
+            <p>
+                Parceria estratégica baseada em confiança e resultados. Nossos serviços de manutenção preditiva e preventiva garantem a operação contínua e segura de suas linhas de produção, com redução de custos e aumento da produtividade.
+            </p>
+            <a href="https://wa.me/551147513446?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20para%20a%20LPG%20Foods." target="_blank" class="btn-cta-full">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </div>
+</div>
+
     <!-- BOTÃO VOLTAR AO TOPO -->
     <span class="seta-up" id="backToTop"><i class="fa fa-angle-up"></i></span>
 
@@ -1185,8 +1976,6 @@ html, body {
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-
-
         // Animação do Logo
         const logoElement = document.querySelector(".fadeInDown");
         if (logoElement) {
@@ -1205,66 +1994,72 @@ html, body {
           observer.observe(logoElement);
         }
 
-       
-            // Animação ao rolar
-            const animateOnScroll = () => {
-                const elements = document.querySelectorAll('.fade-in-up');
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                     if (entry.isIntersecting) {
+        // Animação ao rolar
+        const animateOnScroll = () => {
+          const elements = document.querySelectorAll(".fade-in-up");
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
                   entry.target.classList.add("appear");
                 } else {
                   entry.target.classList.remove("appear");
                 }
-                    });
-                }, {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                });
-                elements.forEach(el => observer.observe(el));
-            };
-            animateOnScroll();
+              });
+            },
+            {
+              threshold: 0.1,
+              rootMargin: "0px 0px -50px 0px",
+            }
+          );
+          elements.forEach((el) => observer.observe(el));
+        };
+        animateOnScroll();
 
-            // Modais de Serviço
-            const serviceCards = document.querySelectorAll('.service-card');
-            const modals = document.querySelectorAll('.modal-overlay');
-            const closeButtons = document.querySelectorAll('.close-modal');
+        // Animação da Timeline ao rolar
+        const timelineItems = document.querySelectorAll(".timeline-item");
 
-         
-
-            serviceCards.forEach(card => {
-                
-                    // Em mobile, abre ao clicar
-                    card.addEventListener('click', function() {
-                        const serviceId = this.getAttribute('data-service');
-                        const modal = document.getElementById(`modal-${serviceId}`);
-                        if (modal) {
-                            modal.classList.add('active');
-                            document.body.style.overflow = 'hidden';
-                        }
-                    });
-               
-
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("appear");
+              }
             });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -10px 0px",
+          }
+        );
 
-            // Fechar modal ao clicar no X
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const modal = this.closest('.modal-overlay');
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            });
+        timelineItems.forEach((item) => {
+          observer.observe(item);
+        });
 
-            // Fechar modal ao clicar fora
-            modals.forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === modal) {
-                        modal.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
+        // Slider de Clientes
+        if (typeof Swiper !== "undefined") {
+          const swiperClients = new Swiper("#sliderClients", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: "#paginationClients",
+              clickable: true,
+            },
+            breakpoints: {
+               480: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1,
+              },
+              992: {
+                slidesPerView: 1,
+              },
+            },
+          });
+        }
 
         // ANIMAÇÃO DOS MAPAS AO ROLAR
         const animateMapsOnScroll = () => {
@@ -1295,7 +2090,55 @@ html, body {
 
         // INICIA A ANIMAÇÃO DOS MAPAS
         animateMapsOnScroll();
-      });
+        });
+        // MODAIS DE PROJETOS E CLIENTES
+const timelineItems = document.querySelectorAll('.timeline-item');
+const clientCards = document.querySelectorAll('.swiper-slide');
+const modals = document.querySelectorAll('.modal-overlay');
+const closeButtons = document.querySelectorAll('.close-modal-full');
+
+// Abrir modal ao clicar nos cards
+timelineItems.forEach(item => {
+    item.addEventListener('click', function() {
+        const modalId = this.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+clientCards.forEach(card => {
+    card.addEventListener('click', function() {
+        const modalId = this.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+// Fechar modal ao clicar no X
+closeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const modal = this.closest('.modal-overlay');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});
+
+// Fechar modal ao clicar fora
+modals.forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+      
     </script>
   </body>
 </html>
