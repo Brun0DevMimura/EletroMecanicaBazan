@@ -14,7 +14,7 @@
     />
     <link
       rel="shortcut icon"
-      href="./img/img_logo_bazan_metalazul.png"
+      href="./img/img_logo_bazan_escalacinza_escrita.svg"
       type="image/x-icon"
     />
 
@@ -56,6 +56,7 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css"
     />
+    
 
     <style>
       /* =============================================
@@ -560,7 +561,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
-        margin: 40px 0;
+        margin: 40px 40px;
         justify-content: center;
       }
 
@@ -873,6 +874,22 @@
         transform: translateX(0);
       }
 
+      .service-icon {
+    width: 70px;
+    height: 70px;
+    background: white;
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    transition: all 0.3s 
+ease;
+}
+
       /* RESPONSIVO */
       @media screen and (max-width: 991px) {
         .nav {
@@ -1100,7 +1117,7 @@
       <div class="container">
         <div class="row row-center">
           <div class="col-12 col-lg-6 order-lg-1">
-            <b style="color: var(--primary-color)">PORTFÓLIO</b><br />
+            <b style="color: var(--primary-color)">Portifólio</b><br />
             <h2>Confira nossos trabalhos</h2>
             <div class="col-12 col-lg-12 order-lg-2 mb-0 mt-4 mb-lg-0">
               <div class="img-border">
@@ -1117,7 +1134,7 @@
               Retrofit Completo - 2024.
             </p>
             <div class="mt-4">
-              <a href="portfolio.html" class="link-btn"
+              <a href="portifolio.html" class="link-btn"
                 >saiba mais
                 <img src="./img/icon_seta_pdireita.svg" alt="Seta para direita"
               /></a>
@@ -1193,10 +1210,11 @@
                       "
                     >
                       <div>
-                        <img
+                           <i class="fas fa-tools"></i>
+                        <!-- <img
                           src="./img/icon_servicos_porca_manut_correctiv.svg"
                           alt="Ícone de porca representando Manutenção Corretiva"
-                        />
+                        /> -->
                         <h3>Manutenção Corretiva</h3>
                       </div>
                     </a>
