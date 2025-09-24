@@ -300,6 +300,8 @@
       }
 
       /* DESTAQUES (SERVIÇOS) */
+
+      
       .session-destaques {
         padding: 80px 0;
         position: relative;
@@ -419,48 +421,7 @@
         right: -50px !important;
       }
 
-      /* DEPOIMENTOS */
-      .session-depoimentos {
-        padding: 80px 0;
-      }
-
-      .session-depoimentos h2 {
-        font-size: 32px;
-        display: inline-block;
-        color: var(--dark-color);
-        margin: 0 0 50px 0;
-        text-align: center;
-        width: 100%;
-      }
-
-      .session-depoimentos h2 b {
-        color: var(--primary-color);
-      }
-
-      .session-depoimentos h5 {
-        font-weight: 700;
-        font-size: 15px;
-        margin: 0;
-      }
-
-      .session-depoimentos span {
-        font-size: 13px;
-        color: #666;
-        display: block;
-        margin-bottom: 10px;
-      }
-
-      .session-depoimentos p {
-        font-size: 13px;
-        font-weight: 300;
-        font-style: italic;
-        color: #555;
-      }
-
-      .img-depoimentos img {
-        border-radius: 100%;
-        border: solid 3px #ccc;
-      }
+      
 
       /* TIPO BADGE */
       .tipo {
@@ -875,6 +836,7 @@
       }
 
       .service-icon {
+        right:-37%;
     width: 70px;
     height: 70px;
     background: white;
@@ -1163,7 +1125,7 @@ ease;
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <a
-                      href="nossosservicos.html#modal-preventiva"
+                      href="nossosservicos.html#modal-projetos"
                       class="item-destaques"
                       style="
                         background: url('./img/img_servicos_manut_preditiv2.png')
@@ -1172,17 +1134,16 @@ ease;
                       "
                     >
                       <div>
-                        <img
-                          src="./img/icon_servicos_grafico_manut_preditiv.svg"
-                          alt="Ícone de gráfico representando Manutenção Preditiva"
-                        />
+                        <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                         <h3>Manutenção Preditiva</h3>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a
-                      href="nossosservicos.html#manutencao-preventiva"
+                      href="nossosservicos.html#modal-projetos"
                       class="item-destaques"
                       style="
                         background: url('./img/img_servicos_manut_prevent1.png')
@@ -1191,17 +1152,16 @@ ease;
                       "
                     >
                       <div>
-                        <img
-                          src="./img/icon_servicos_checklist_manut_preventiv.svg"
-                          alt="Ícone de checklist representando Manutenção Preventiva"
-                        />
+                       <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
                         <h3>Manutenção Preventiva</h3>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a
-                      href="nossosservicos.html#manutencao-corretiva"
+                      href="nossosservicos.html#modal-projetos"
                       class="item-destaques"
                       style="
                         background: url('./img/img_servicos_manut_correctiv1.jpg')
@@ -1210,18 +1170,16 @@ ease;
                       "
                     >
                       <div>
-                           <i class="fas fa-tools"></i>
-                        <!-- <img
-                          src="./img/icon_servicos_porca_manut_correctiv.svg"
-                          alt="Ícone de porca representando Manutenção Corretiva"
-                        /> -->
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
                         <h3>Manutenção Corretiva</h3>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a
-                      href="nossosservicos.html#projetos"
+                      href="nossosservicos.html#modal-projetos"
                       class="item-destaques"
                       style="
                         background: url('./img/img_servicos_project2.jpg')
@@ -1230,17 +1188,16 @@ ease;
                       "
                     >
                       <div>
-                        <img
-                          src="./img/icon_servicos_lapis_project1.svg"
-                          alt="Ícone de lápis representando Projetos Sob Medida"
-                        />
+                        <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
                         <h3>Projetos Sob Medida</h3>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a
-                      href="nossosservicos.html#servicos-industriais"
+                      href="nossosservicos.html#modal-projetos"
                       class="item-destaques"
                       style="
                         background: url('./img/img_servic0s_servindustries2_solda.jpg')
@@ -1249,10 +1206,9 @@ ease;
                       "
                     >
                       <div>
-                        <img
-                          src="./img/icon_servicos_maskweld_servindustries.svg"
-                          alt="Ícone de máscara de solda representando Serviços Industriais"
-                        />
+                        <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
                         <h3>Serviços Industriais</h3>
                       </div>
                     </a>
