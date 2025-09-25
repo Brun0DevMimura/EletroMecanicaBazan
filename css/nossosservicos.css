@@ -107,7 +107,7 @@
  }
 
  .ic-menu {
-   background: url("./img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
+   background: url("../img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
    background-size: cover;
    display: inline-block;
    color: var(--dark-color);
@@ -157,7 +157,7 @@
  /*CONTEUDO*/
  /* HERO SECTION */
  .hero-services {
-   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/img_hero_nossosserviços.jpg') center center no-repeat;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/img_hero_nossosserviços.jpg') center center no-repeat;
    background-size: cover;
    height: 100vh;
    display: flex;

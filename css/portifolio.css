@@ -103,7 +103,7 @@
     }
 
     .ic-menu {
-      background: url("/img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
+      background: url("../img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
       background-size: cover;
       display: inline-block;
       color: var(--dark-color);
@@ -154,7 +154,7 @@
     /* HERO */
     .hero-portfolio {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("/img/img_servicos_herocontent.png") center center no-repeat;
+        url("../img/img_servicos_herocontent.png") center center no-repeat;
       background-size: cover;
       /* ✅ REMOVA AS ASPAS */
       background-position: center;
@@ -219,7 +219,7 @@
       left: -48%;
       width: 200vw;
       height: 100%;
-      background: url("/img/img_logo_bazan_escalacinza.svg") center center no-repeat;
+      background: url("../img/img_logo_bazan_escalacinza.svg") center center no-repeat;
       background-size: cover;
       opacity: 6%;
       z-index: -1;

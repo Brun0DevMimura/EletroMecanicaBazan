@@ -91,7 +91,7 @@
   }
 
   .ic-menu {
-    background: url("/img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
+    background: url("../img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
     background-size: cover;
     display: inline-block;
     color: var(--dark-color);
@@ -148,7 +148,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    background: url("/img/img_hero_homemsoldando.png") center center no-repeat;
+    background: url("../img/img_hero_homemsoldando.png") center center no-repeat;
     background-size: cover;
     position: relative;
   }
