@@ -16,6 +16,7 @@
  body {
    overflow-x: hidden;
    width: 100%;
+   min-width: 320px;
  }
 
  body {
@@ -67,10 +68,10 @@
    height: auto;
  }
 
- .row-center {
+ /* .row-center {
    align-items: center;
    justify-content: center;
- }
+ } */
 
  /* HEADER */
  .header {
@@ -97,11 +98,19 @@
    color: var(--dark-color) !important;
  }
 
- .slogan {
-   font-size: 12px;
-   color: var(--dark-color);
-   line-height: 1.4;
- }
+.slogan {
+    font-size: 12px;
+    color: var(--dark-color);
+    line-height: 1.4;
+        margin-left: 30px;
+}
+  
+
+  .whatsapp-link {
+   position: relative;
+    left: 124px;
+    bottom: 27px;
+  }
 
  .ic-menu {
    background: url("../img/icon_menu_hamburguer_azulepreto.svg") center center no-repeat;
